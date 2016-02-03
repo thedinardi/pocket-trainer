@@ -1121,6 +1121,9 @@
                                         <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="60"/>
                                         <color key="textColor" red="0.49019607843137253" green="0.062745098039215685" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="10" y="250" width="1004" height="70"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <constraints>
@@ -1163,6 +1166,9 @@
                                         <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="45"/>
                                         <color key="textColor" red="0.49019607843137253" green="0.062745098039215685" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="10" y="150" width="1004" height="53"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <constraints>
@@ -1216,7 +1222,7 @@
                             <constraint firstItem="fpD-BE-lDj" firstAttribute="leading" secondItem="iar-zJ-Du9" secondAttribute="leading" id="3Ns-O1-7kf"/>
                             <constraint firstItem="PnB-OV-Cw5" firstAttribute="top" secondItem="iar-zJ-Du9" secondAttribute="top" id="3i8-nO-YsL"/>
                             <constraint firstItem="UEy-Qv-0Zb" firstAttribute="leading" secondItem="iar-zJ-Du9" secondAttribute="leading" id="Bmc-Di-1cZ"/>
-                            <constraint firstAttribute="bottom" secondItem="fpD-BE-lDj" secondAttribute="bottom" constant="150" id="FKi-HZ-PeS"/>
+                            <constraint firstAttribute="bottom" secondItem="fpD-BE-lDj" secondAttribute="bottom" constant="100" id="FKi-HZ-PeS"/>
                             <constraint firstAttribute="trailing" secondItem="UEy-Qv-0Zb" secondAttribute="trailing" id="IMG-8b-hSG"/>
                             <constraint firstItem="xA3-8v-rhf" firstAttribute="leading" secondItem="iar-zJ-Du9" secondAttribute="leading" id="Jrd-fV-h7Q"/>
                             <constraint firstAttribute="trailing" secondItem="fpD-BE-lDj" secondAttribute="trailing" id="S1v-4E-mNw"/>
@@ -1241,10 +1247,10 @@
                                 <exclude reference="fpD-BE-lDj"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="3i8-nO-YsL"/>
-                                <exclude reference="cDr-hQ-kyW"/>
-                                <exclude reference="tgp-Fk-rTe"/>
-                                <exclude reference="wWN-gX-APP"/>
+                                <exclude reference="3Ns-O1-7kf"/>
+                                <exclude reference="FKi-HZ-PeS"/>
+                                <exclude reference="S1v-4E-mNw"/>
+                                <exclude reference="isM-yJ-eW8"/>
                                 <exclude reference="142-gl-Tkf"/>
                                 <exclude reference="Bmc-Di-1cZ"/>
                                 <exclude reference="IMG-8b-hSG"/>
@@ -1255,10 +1261,10 @@
                                 <exclude reference="bu0-fy-mCh"/>
                                 <exclude reference="s6J-wg-YrE"/>
                                 <exclude reference="uo6-Lg-M9u"/>
-                                <exclude reference="3Ns-O1-7kf"/>
-                                <exclude reference="FKi-HZ-PeS"/>
-                                <exclude reference="S1v-4E-mNw"/>
-                                <exclude reference="isM-yJ-eW8"/>
+                                <exclude reference="3i8-nO-YsL"/>
+                                <exclude reference="cDr-hQ-kyW"/>
+                                <exclude reference="tgp-Fk-rTe"/>
+                                <exclude reference="wWN-gX-APP"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -1276,6 +1282,10 @@
                                 <include reference="fpD-BE-lDj"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="3Ns-O1-7kf"/>
+                                <include reference="FKi-HZ-PeS"/>
+                                <include reference="S1v-4E-mNw"/>
+                                <include reference="isM-yJ-eW8"/>
                                 <include reference="142-gl-Tkf"/>
                                 <include reference="Bmc-Di-1cZ"/>
                                 <include reference="IMG-8b-hSG"/>
@@ -1286,10 +1296,6 @@
                                 <include reference="bu0-fy-mCh"/>
                                 <include reference="s6J-wg-YrE"/>
                                 <include reference="uo6-Lg-M9u"/>
-                                <include reference="3Ns-O1-7kf"/>
-                                <include reference="FKi-HZ-PeS"/>
-                                <include reference="S1v-4E-mNw"/>
-                                <include reference="isM-yJ-eW8"/>
                             </mask>
                         </variation>
                     </view>

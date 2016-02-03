@@ -287,7 +287,9 @@ class ViewController: UIViewController {
             //iPad height
             
             let constantHeight = self.view.frame.height / 8
-            let spacing = constantHeight / 25
+            let spacing = constantHeight / 50
+        
+            
             let heightConstraint:NSLayoutConstraint = NSLayoutConstraint(item: answer, attribute:NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: constantHeight)
             
             answer.addConstraint(heightConstraint)

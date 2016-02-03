@@ -64,6 +64,14 @@ class FeedbackViewController: UIViewController {
         //self.dimView.alpha = 0
         //self.resultView.alpha = 0
         
+        //Next Button bottom spacing
+        
+//        let bottomSpacing = self.view.frame.height / 20
+//        
+//        let bottomConstraint:NSLayoutConstraint = NSLayoutConstraint(item: nextButton2, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.BottomMargin, multiplier: 1, constant: bottomSpacing)
+//        
+//        self.view.addConstraint(bottomConstraint)
+//        
         
         
         
@@ -93,6 +101,8 @@ class FeedbackViewController: UIViewController {
 //        
 //        self.navigationController!.navigationBarHidden = false
 //    }
+    
+    
 
     
     func displayCurrentQuestion() {

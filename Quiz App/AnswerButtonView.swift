@@ -64,7 +64,7 @@ class AnswerButtonView: UIView {
         
         //iPad font
         if (UI_USER_INTERFACE_IDIOM() == .Pad) {
-            self.answerLabel.font = UIFont.systemFontOfSize(24)
+            self.answerLabel.font = UIFont.systemFontOfSize(25)
         }
 
         
