@@ -43,6 +43,4 @@ class CourseManager: NSObject {
             self.selectedCourseIndex = self.courses.indexOf(newCourse)!
         }
     }
-    
-    
 }
