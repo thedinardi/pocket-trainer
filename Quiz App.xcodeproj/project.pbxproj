@@ -176,6 +176,7 @@
 				E6AB8EF01BF0FC3C00DB5FE9 /* Resources */,
 				834ED3A26C1747C87C15C653 /* Embed Pods Frameworks */,
 				9B137F772CB6F0897C8CF028 /* Copy Pods Resources */,
+				E6BACAE31C62809D00BD5D9A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -286,6 +287,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Quiz App/Pods-Quiz App-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		E6BACAE31C62809D00BD5D9A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 2ad99d9e3db2cb2afd97a5da773d91b17b25eb90 1a498341bd162639db3c2af21d32761f9cc318146532e61b4bef921836c0676d";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -422,6 +436,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = "Quiz App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ricmurraystudio;

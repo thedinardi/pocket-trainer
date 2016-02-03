@@ -9,6 +9,7 @@
 import UIKit
 import AVKit
 import AVFoundation
+import Crashlytics
 
 class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -53,22 +54,20 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 //If some error occurs execution comes into here
                 
             }
-        
-//            for (i,button) in buttons.enumerate() {
-//                let lesson = CourseManager.sharedInstance.currentCourse.lessons[i]
-//                button.setTitle(lesson.name, forState: UIControlState.Normal)
-//                button.titleLabel!.minimumScaleFactor = 1
-//                button.titleLabel!.numberOfLines = 0
-//                button.titleLabel!.textAlignment = NSTextAlignment.Center
-//                button.titleLabel!.adjustsFontSizeToFitWidth = true
-//                
-//      
-//            }
             
-            
+            let button = UIButton(type: UIButtonType.RoundedRect)
+            button.frame = CGRectMake(20, 50, 100, 30)
+            button.setTitle("Crash", forState: UIControlState.Normal)
+            button.addTarget(self, action: "crashButtonTapped:", forControlEvents: UIControlEvents.TouchUpInside)
+            view.addSubview(button)
+
         }
     
-    
+    @IBAction func crashButtonTapped(sender: AnyObject) {
+        Crashlytics.sharedInstance().crash()
+    }
+
+
     func updateCourseLabel () {
         
         self.courseLabel.text = CourseManager.sharedInstance.currentCourse.name
