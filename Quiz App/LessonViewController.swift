@@ -59,7 +59,7 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
             button.frame = CGRectMake(20, 50, 100, 30)
             button.setTitle("Crash", forState: UIControlState.Normal)
             button.addTarget(self, action: "crashButtonTapped:", forControlEvents: UIControlEvents.TouchUpInside)
-            view.addSubview(button)
+            //view.addSubview(button)
 
         }
     
