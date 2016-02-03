@@ -1,0 +1,570 @@
+[
+  {
+    "name": "HVAC System Fundamentals",
+    "lessons": [
+      {
+        "id": 1,
+        "name": "Introduction",
+        "lesson": 0,
+        "movieURL": "http://pstream.cdn1.arcostream.com/taco/elearn_jwplayer/TU%20HSF%20Intro%20V2.mp4"
+      },
+      {
+        "id": 2,
+        "name": "System Terms & Definitions",
+        "lesson": 1,
+        "movieURL": "http://pstream.cdn1.arcostream.com/taco/elearn_jwplayer/TU%20HSF%20Les1%20V2.mp4"
+      },
+      {
+        "id": 3,
+        "name": "Building Ownership and Use Considerations",
+        "lesson": 2,
+        "movieURL": "http://pstream.cdn1.arcostream.com/taco/elearn_jwplayer/TU%20HSF%20Les2%20V3.mp4",
+        "quiz": [
+          {
+            "question": "Designing a commercial HVAC system is purely a technical process.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 1",
+            "lesson": 2,
+            "feedback": "There are many other subjective factors that have to be considered."
+          },
+          {
+            "question": "When designing a commercial HVAC system, the engineer must consider a variety of factors in addition to the technical requirements of the system.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 2",
+            "lesson": 2,
+            "feedback": "The engineer does have to consider a variety of factors over and above the technical aspects, such as the intended use of the building, whether it will be owner-occupied and many more."
+          },
+          {
+            "question": "It's important for the HVAC engineer to understand the business case for the project when designing the HVAC system.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 3",
+            "lesson": 2,
+            "feedback": "No matter what else it does, an HVAC system has to fit into the overall business case for the building."
+          },
+          {
+            "question": "The developer of a commercial rental property is likely to have a relatively short-term interest in the project.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 4",
+            "lesson": 2,
+            "feedback": "The business case for most developers is to build, stabalizem and sell at a profit."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Criteria for Good Design",
+        "lesson": 3,
+        "movieURL": "http://pstream.cdn1.arcostream.com/taco/elearn_jwplayer/TU%20HSF%20Les3%20V3.mp4",
+        "quiz": [
+          {
+            "question": "We can evaluate the design of an HVAC system by how well it achieves its' intended purpose.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 1",
+            "lesson": 3,
+            "feedback": "If an HVAC system is achieving its' intended purpose it is properly designed."
+          },
+          {
+            "question": "The principles of good design don't apply to a commercial HVAC system.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 2",
+            "lesson": 3,
+            "feedback": "The principles of good design apply no matter what you're designing."
+          },
+          {
+            "question": "A good HVAC system design:",
+            "answers": [
+              "Will take advantage of physical laws (i.e., heat rises)",
+              "Will be energy efficient",
+              "Will keep building occupants comfortable",
+              "All of the above"
+            ],
+            "correctIndex": 3,
+            "module": "Question 3",
+            "lesson": 3,
+            "feedback": "A well designed HVAC system will accomplish all of these goals."
+          },
+          {
+            "question": "When choosing the distribution for a system, the fundamental choice is water-based or air-based.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 4",
+            "lesson": 3,
+            "feedback": "A quick hand washing would not last long enough for the SmartPlus to recognize it as a hot water event."
+          },
+          {
+            "question": "Which type of commercial HVAC system is the most energy efficient?",
+            "answers": [
+              "Hydronic",
+              "Air",
+              "Hybrid",
+              "All are about equal in energy efficiency"
+            ],
+            "correctIndex": 0,
+            "module": "Question 5",
+            "lesson": 3,
+            "feedback": "Hydronic systems are more energy efficient for several reasons."
+          },
+          {
+            "question": "Hydronic systems are generally more comfortable for occupants.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 6",
+            "lesson": 3,
+            "feedback": "Hydronic heat is more even and doesn't create drafts, so occupants tend to be more comfortable."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "System Options & Selections",
+        "lesson": 4,
+        "movieURL": "http://pstream.cdn1.arcostream.com/taco/elearn_jwplayer/TU%20HSF%20Les4%20V2.mp4",
+        "quiz": [
+          {
+            "question": "Water source heat pumps utilize a reversible refrigerant cycle to provide both heating and cooling.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 1",
+            "lesson": 4,
+            "feedback": "A reversable refrigerant cycle is needed to provide both heating and cooling."
+          },
+          {
+            "question": "One drawback of water source heat pumps is noise, if they are not strategically located.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 2",
+            "lesson": 4,
+            "feedback": "Water source heat pumps are noisy if not strategically located."
+          },
+          {
+            "question": "Geothermal heat pumps transfer heat to or from the earth itself for heating and cooling.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 3",
+            "lesson": 4,
+            "feedback": "Geothermal heat pumps give and take heat to and from the earth."
+          },
+          {
+            "question": "VAV systems deliver supply air at one temperature to all zones throughout a building.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 4",
+            "lesson": 4,
+            "feedback": "VAV units each need a heater."
+          },
+          {
+            "question": "Active chilled beams and radiant heating used separately or together make use of natural induction air flow to accomplish heating and cooling.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 4",
+            "lesson": 4,
+            "feedback": "Since these systems use natural induction air flow the energy costs are much less then comparable systems."
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Real World System Comparisons",
+        "lesson": 4,
+        "movieURL": "http://pstream.cdn1.arcostream.com/taco/elearn_jwplayer/TU%20HSF%20Les5%20V2.mp4",
+        "quiz": [
+          {
+            "question": "Component size affects system costs in terms of:",
+            "answers": [
+              "First costs",
+              "Life cycle costs",
+              "Energy requirements",
+              "All of the above"
+            ],
+            "correctIndex": 3,
+            "module": "Question 1",
+            "lesson": 5,
+            "feedback": "Component size affects a wide range of system costs."
+          },
+          {
+            "question": "Some types of HVAC systems are clearly superior to others in all applications.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 2",
+            "lesson": 5,
+            "feedback": "No one type of HVAC system is best in every kind of application."
+          },
+          {
+            "question": "In terms of first costs, water source heat pumps are less expensive than either variable air volume (VAV) or chilled beam systems.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 3",
+            "lesson": 5,
+            "feedback": "VAV system first costs are less expensive than the other systems we compared."
+          },
+          {
+            "question": "Among the 3 systems, chilled beams have higher first costs but the lowest system life cycle costs.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 4",
+            "lesson": 5,
+            "feedback": "Chilled beam systems are the most efficient."
+          },
+          {
+            "question": "HVAC systems with lower first costs tend to have higher operating costs",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 5",
+            "lesson": 5,
+            "feedback": "An up-front investment in a more efficient system will lower the operating costs."
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Summary & Final Exam",
+        "lesson": 6,
+        "movieURL": "http://pstream.cdn1.arcostream.com/taco/elearn_jwplayer/TU%20HSF%20Les6%20V2.mp4",
+        "quiz": [
+          {
+            "question": "In addition to technical requirements, a proposed HVAC system must take into consideration:",
+            "answers": [
+              "The owner's assumptions and expectations for the building",
+              "The owner's evaluation of first costs versus operating costs",
+              "Whether the building will be owner-occupied or rented",
+              "All of the above"
+            ],
+            "correctIndex": 3,
+            "module": "Question 1",
+            "lesson": 6,
+            "feedback": "All of these and many more factors must be taken into consideration when designing an HVAC system."
+          },
+          {
+            "question": "When presenting a proposed HVAC system it's most important to emphasize the technical sophistication of the system.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 2",
+            "lesson": 6,
+            "feedback": "Most owners are far more interested in system performance and costs than the technology itself."
+          },
+          {
+            "question": "When designing a commercial HVAC system, financial and business factors are less important than the technical factors.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 3",
+            "lesson": 6,
+            "feedback": "It's best for the HVAC professional to understand the broad business and financial context of the project."
+          },
+          {
+            "question": "When designing a commercial HVAC system, the engineer must be clear about what commercial benefit the owner expects to realize.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 4",
+            "lesson": 6,
+            "feedback": "The engineer must know all of the owner's goals before designing and HVAC system."
+          },
+          {
+            "question": "Owners generally name cost as their first priority for a commercial HVAC system.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 5",
+            "lesson": 6,
+            "feedback": "Owners will often put comfort at the top of their list until they start to look at the price of the system.  Then cost becomes their number one concern."
+          },
+          {
+            "question": "When designing an HVAC system, the engineer is well-served to recognize the point of view, assumptions, opinions, etc.—that he or she brings to the project.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 6",
+            "lesson": 6,
+            "feedback": "A good enginner must recognize all of these things in order to design the best system possible."
+          },
+          {
+            "question": "A properly designed HVAC system will be sized:",
+            "answers": [
+              "To fit primarily based on the project budget",
+              "To provide sufficient occupant comfort without reducing system efficiency",
+              "To reduce the carbon footprint, even at the expense of some occupant comfort",
+              "None of the above"
+            ],
+            "correctIndex": 1,
+            "module": "Question 7",
+            "lesson": 6,
+            "feedback": "A properly designed HVAC system will provide comfort without wasting energy."
+          },
+          {
+            "question": "Old design axioms such as Less is more, and Form follows function, are less important when it comes to a highly technical design such as a commercial HVAC system.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 8",
+            "lesson": 6,
+            "feedback": "Those design principles hold just as true for an HVAC system as any other design."
+          },
+          {
+            "question": "The major objectives of any commercial HVAC system include:",
+            "answers": [
+              "Providing comfort to building occupants",
+              "Creating a system that is easy to work with and monitor",
+              "Using an energy source that is readily available, cost effective and clean",
+              "All of the above"
+            ],
+            "correctIndex": 3,
+            "module": "Question 9",
+            "lesson": 6,
+            "feedback": "All of these should be major objectives when designing an HVAC system."
+          },
+          {
+            "question": "When designing an HVAC system,  it’s good practice to identify the best energy source available and design the system to utilize that energy source.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 10",
+            "lesson": 6,
+            "feedback": "You want to build in the flexibility to use various energy sources as prices, availability and other factors change."
+          },
+          {
+            "question": "The HVAC system designer’s most fundamental decision is whether the system will be air based or water based",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 11",
+            "lesson": 6,
+            "feedback": "Deciding between a water or air based system is the most fundamental decision an HVAC system designer will make."
+          },
+          {
+            "question": "Because air is less dense than water, it is a more efficient medium for moving BTU’s in an HVAC system.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 12",
+            "lesson": 6,
+            "feedback": "Water is a far more efficient medium for transferring BTUs."
+          },
+          {
+            "question": "Hydronic systems require substantially less energy than a comparable air system to move the same amount of heat.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 13",
+            "lesson": 6,
+            "feedback": "Energy costs are higher for large fan motors than small circulator motors."
+          },
+          {
+            "question": "Hydronic system piping leaves more usable space for owners and occupants than air-based systems.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 14",
+            "lesson": 6,
+            "feedback": "Hydronic piping takes up much less space than large air system ductwork."
+          },
+          {
+            "question": "Air-based systems are easy to modify for use with alternative energy sources.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 15",
+            "lesson": 6,
+            "feedback": "Air-based systems are not flexible enough to easily modify to use alternative energy sources."
+          },
+          {
+            "question": "Active chilled beams:",
+            "answers": [
+              "Provide ventilation, heating and cooling",
+              "Use only natural convection for circulation of room air",
+              "Require a fan for circulation of room air",
+              "None of the above"
+            ],
+            "correctIndex": 0,
+            "module": "Question 16",
+            "lesson": 6,
+            "feedback": "Chilled beams provide ventilation, heating and cooling."
+          },
+          {
+            "question": "The majority of installed commercial HVAC systems are air-based because it isn’t possible to provide cooling with a hydronic system.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 17",
+            "lesson": 6,
+            "feedback": "Hydronic systems can be used for cooling, as we’ve seen with chilled beams."
+          },
+          {
+            "question": "Air systems generally require about three times as much energy to move the same amount of heat as a comparable hydronic system.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 18",
+            "lesson": 6,
+            "feedback": "Air systems are less efficient than hydronic systems."
+          },
+          {
+            "question": "Which type of system generally provides the best occupant comfort?",
+            "answers": [
+              "Water source heat pumps",
+              "VAV",
+              "Chilled beams",
+              "They are all about the same"
+            ],
+            "correctIndex": 2,
+            "module": "Question 19",
+            "lesson": 6,
+            "feedback": "Chilled beams are more comfortable because they provide even temperatures."
+          },
+          {
+            "question": "Hydronic systems also need an “air side” to provide ventilation.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 20",
+            "lesson": 6,
+            "feedback": "All systems need some sort of air side to provide ventilation."
+          },
+          {
+            "question": "Chilled beams are suitable for providing both heating and cooling.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 21",
+            "lesson": 6,
+            "feedback": "Chilled beams can provide both heating and cooling."
+          },
+          {
+            "question": "When chilled beams are used for heating as well as cooling, they generally require supplemental heating.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 22",
+            "lesson": 6,
+            "feedback": "Chilled beams generally require some sort of supplemental heating."
+          },
+          {
+            "question": "Generally, active chilled beams provide enough heating capacity for perimeter areas.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 23",
+            "lesson": 6,
+            "feedback": "Perimeter area are where chilled beams do not provide enough heating capacity."
+          },
+          {
+            "question": "The lowest first costs will always provide the best return on investment over the life of a building.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 24",
+            "lesson": 6,
+            "feedback": "Lower first costs in no way assure a better return on investment over the life of the building."
+          },
+          {
+            "question": "One drawback of water source heat pumps is that they don’t allow individual zone temperature control.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 25",
+            "lesson": 6,
+            "feedback": "Water source heat pumps do allow individual zone temperature control, like a unit in a hotel room."
+          }
+        ]
+      }
+    ]
+  }
+]

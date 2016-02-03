@@ -1,0 +1,465 @@
+[
+  {
+    "name": "Domestic Hot Water",
+    "lessons": [
+      {
+        "id": 1,
+        "name": "Introduction",
+        "lesson": 0,
+        "movieURL": "http://pstream.cdn1.arcostream.com/taco/elearn_jwplayer/FPU%20DHW%20Intro.m4v"
+      },
+      {
+        "id": 2,
+        "name": "Hot Water Yesterday and Today",
+        "lesson": 1,
+        "movieURL": "http://pstream.cdn1.arcostream.com/taco/elearn_jwplayer/FPU%20DHW%20Les1.m4v",
+        "quiz": [
+          {
+            "question": "On average, how much bigger are homes today than they were in the 70s?",
+            "answers": [
+              "40%",
+              "50%",
+              "60%",
+              "75%"
+            ],
+            "correctIndex": 1,
+            "module": "Question 1",
+            "lesson": 1,
+            "feedback": "In the 1970s the average home was 1,600 sqaure feet. Homes today average 2,400 square feet."
+          },
+          {
+            "question": "According to the Department of Energy (DOE), how many gallons of water does the average family use in a day?",
+            "answers": [
+              "40",
+              "60",
+              "80",
+              "100"
+            ],
+            "correctIndex": 1,
+            "module": "Question 2",
+            "lesson": 1,
+            "feedback": "The average family uses about 60 gallons of water each day."
+          },
+          {
+            "question": "The DOE estimates a family of 4 can send how many gallons down the drain while waiting for hot qater to arrive.",
+            "answers": [
+              "8,000 gallons",
+              "10,000 gallons",
+              "12,000 gallons",
+              "14,000 gallons"
+            ],
+            "correctIndex": 2,
+            "module": "Question 3",
+            "lesson": 1,
+            "feedback": "The average family of 4 wastes about 12,000 gallons of water per year waiting for hot water."
+          },
+          {
+            "question": "In the 1970's, the pipe run to the farthest fixture averaged 30 feet.  In homes built today the distance averages:",
+            "answers": [
+              "50-60 feet",
+              "60-70 feet",
+              "70-80 feet",
+              "80-90 feet"
+            ],
+            "correctIndex": 3,
+            "module": "Question 4",
+            "lesson": 1,
+            "feedback": "The distance from the water heater to the fathest fixture has almost tripled, from 30 feet in the 70's to 80-90 feet today."
+          },
+          {
+            "question": "According to DOE estimates, approximately how much of the money spent on hot water is wasted?",
+            "answers": [
+              "1/4",
+              "1/3",
+              "1/2"
+            ],
+            "correctIndex": 1,
+            "module": "Question 5",
+            "lesson": 1,
+            "feedback": "Leaving fixtures open while waiting for hot water to arrive can waste as much as 1/3 of every domestic hot water dollar."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Basic Recirculation for Convenience",
+        "lesson": 2,
+        "movieURL": "http://pstream.cdn1.arcostream.com/taco/elearn_jwplayer/FPU%20DHW%20Les2.m4v",
+        "quiz": [
+          {
+            "question": "A recirculation system with a central manifold and hot and cold lines going out to the fixtures is called:",
+            "answers": [
+              "Trunk and branch",
+              "Home run",
+              "Combination"
+            ],
+            "correctIndex": 1,
+            "module": "Question 1",
+            "lesson": 2,
+            "feedback": "A Home run system configuration has a central manifold with hot and cold lines going to the fixtures."
+          },
+          {
+            "question": "Half-loop recirculation is more efficient than full-loop recirculation.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 2",
+            "lesson": 2,
+            "feedback": "Half-loop configurations save energy by using an aquastat to shut the pump off as soon as there's hot water at the farthest fixture."
+          },
+          {
+            "question": "Aquastats can be installed at the water heater or the farthest fixture.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 3",
+            "lesson": 2,
+            "feedback": "Aquastats should be installed just before or just after the farthest fixture."
+          },
+          {
+            "question": "Timer based recirculation is a good choice for tankless systems.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 4",
+            "lesson": 2,
+            "feedback": "If the timer tells the tankless water heater to run when you actually don't need hot water, you'll end up short-cycling the heater and shorten its life."
+          },
+          {
+            "question": "The digital version of Taco's Plumb n' Plug can handle how many events each day?",
+            "answers": [
+              "2 events",
+              "5 events",
+              "7 events",
+              "10 events"
+            ],
+            "correctIndex": 2,
+            "module": "Question 5",
+            "lesson": 2,
+            "feedback": "The Plumb n' Plug with the digital timer can handle up to 7 separate events a day, for a total of 49 events a week."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "The Energy Efficient Solution",
+        "lesson": 3,
+        "movieURL": "http://pstream.cdn1.arcostream.com/taco/elearn_jwplayer/FPU%20DHW%20Les3.m4v",
+        "quiz": [
+          {
+            "question": "The SmartPlus can be used with or without a dedicated recirculation line.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 1",
+            "lesson": 3,
+            "feedback": "The SmartPlus has to have a recirculation line.  So it's not an option for retrofits, unless you have a relatively easy way to install one."
+          },
+          {
+            "question": "Using the sensor with the SmartPlus will improve its performance, but insatllation is optional.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 2",
+            "lesson": 3,
+            "feedback": "For the SmartPlus to function properly, you must use the sensor."
+          },
+          {
+            "question": "The SmartPlus cycles at theis rate:",
+            "answers": [
+              "1 minute on / 5 minutes off",
+              "2 minutes on / 10 mintues off",
+              "2-1/2 minutes on / 10 minutes off",
+              "5 minutes on / 15 minutes off"
+            ],
+            "correctIndex": 2,
+            "module": "Question 3",
+            "lesson": 3,
+            "feedback": "The SmartPlus cycles at a rate of 2-1/2 minutes on and 10 minutes off."
+          },
+          {
+            "question": "Which of the following is NOT a hot water event?",
+            "answers": [
+              "Washing dishes by hand",
+              "Taking a shower",
+              "Washing hands"
+            ],
+            "correctIndex": 2,
+            "module": "Question 4",
+            "lesson": 3,
+            "feedback": "A quick hand washing would not last long enough for the SmartPlus to recognize it as a hot water event."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Even More Efficiency",
+        "lesson": 4,
+        "movieURL": "http://pstream.cdn1.arcostream.com/taco/elearn_jwplayer/FPU%20DHW%20Les4.m4v",
+        "quiz": [
+          {
+            "question": "The TacoGenie can be used with or without a dedicated return line.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 1",
+            "lesson": 4,
+            "feedback": "The TacoGenie is capable of using the cold water return line as a return, as well as a dedicated line."
+          },
+          {
+            "question": "The TacoGenie cannot be used with tankless systems.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 2",
+            "lesson": 4,
+            "feedback": "The TacoGenie has the versatility to handle both traditional and tankless DHW systems."
+          },
+          {
+            "question": "How long is the lockout period on the TacoGenie?",
+            "answers": [
+              "3 minutes",
+              "5 minutes",
+              "8 minutes",
+              "10 minutes"
+            ],
+            "correctIndex": 2,
+            "module": "Question 3",
+            "lesson": 4,
+            "feedback": "There is an 8 minute lockout period before the TacoGenie can be reactivated."
+          },
+          {
+            "question": "The TacoGenie will not operate if the temperature of the water on the inlet side reaches:",
+            "answers": [
+              "95 degrees",
+              "100 degrees",
+              "105 degrees",
+              "110 degrees"
+            ],
+            "correctIndex": 1,
+            "module": "Question 4",
+            "lesson": 4,
+            "feedback": "The TacoGenie has a fail-safe feature that will prevent it from operating if the temperature on the inlet side ever reaches 100 degrees."
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Hot-Link and Final Thoughts",
+        "lesson": 5,
+        "movieURL": "http://pstream.cdn1.arcostream.com/taco/elearn_jwplayer/FPU%20DHW%20Les5.m4v"
+      },
+      {
+        "id": 7,
+        "name": "Final Exam",
+        "movieURL": "http://pstream.cdn1.arcostream.com/taco/elearn_jwplayer/FPU%20DHW%20Les5.m4v"
+        "lesson": 6,
+        "quiz": [
+          {
+            "question": "When you open a fixture and wait for hot water, how many gallons are you wasting?",
+            "answers": [
+              "1 GPM",
+              "3 GPM",
+              "5 GPM",
+              "7 GPM"
+            ],
+            "correctIndex": 1,
+            "module": "Question 1",
+            "lesson": 6,
+            "feedback": "Waiting for hot water wastes about 3 gallons per minute."
+          },
+          {
+            "question": "Depending on where you live and your lifestyle, domestic hot water can consume what portion of your energy cost?",
+            "answers": [
+              "One tenth",
+              "One quarter",
+              "One third",
+              "One half"
+            ],
+            "correctIndex": 1,
+            "module": "Question 2",
+            "lesson": 6,
+            "feedback": "On average DHW accounts for about a quarter of your energy costs."
+          },
+          {
+            "question": "The most common plumbing configuration is:",
+            "answers": [
+              "Combination (Primary loop with secondary tees)",
+              "Home Run (Central manifold with supply lines)",
+              "Trunk and Branch"
+            ],
+            "correctIndex": 2,
+            "module": "Question 3",
+            "lesson": 6,
+            "feedback": "Traditional trunk and branch is still the most common configuration."
+          },
+          {
+            "question": "A common recirculation setup in new homes is:",
+            "answers": [
+              "Full-loop",
+              "Half-loop",
+              "Half-loop using the cold water line as a return"
+            ],
+            "correctIndex": 0,
+            "module": "Question 4",
+            "lesson": 6,
+            "feedback": "Full-loop recirculation is common in new construction, because it's easy to run the piping."
+          },
+          {
+            "question": "Some half-loop recirculation systems use the cold water line as a return.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 5",
+            "lesson": 6,
+            "feedback": "Half-loop systems can either use an aquastat with a dedicated return line, or use the cold water line for recirculation."
+          },
+          {
+            "question": "The best place to install an aquastat is at the water heater.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 6",
+            "lesson": 6,
+            "feedback": "An aquastat should be installed at the farthest fixture, so it can shut off the pump as soon as the water is hot."
+          },
+          {
+            "question": "Aquastats can only be used with the digital version of the Plumb n' Plug.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 7",
+            "lesson": 6,
+            "feedback": "Aquastats can be used with both the analog and digital models of the Plumb n' Plug."
+          },
+          {
+            "question": "Most recirculation pumps have this type of timer:",
+            "answers": [
+              "Analog",
+              "Digital",
+              "Half use analog, half use digital"
+            ],
+            "correctIndex": 0,
+            "module": "Question 8",
+            "lesson": 6,
+            "feedback": "Most pumps use a 24 hour analog timer.  The Plumb n' Plug is available in both analog and digital versions."
+          },
+          {
+            "question": "In systems with both aquastats and timers, it's the aquastat that controls when the pump will shut off.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 9",
+            "lesson": 6,
+            "feedback": "Once water at the farthest fixture is hot enough, the aquastat will shut off the pump."
+          },
+          {
+            "question": "In Pulse Mode, the SmartPlus runs approximately how many minutes out of every hour?",
+            "answers": [
+              "10",
+              "20",
+              "30",
+              "40"
+            ],
+            "correctIndex": 0,
+            "module": "Question 10",
+            "lesson": 6,
+            "feedback": "The SmartPlus operates on a 2-1/2 minutes on and 10 minutes off cycle. So it runs only about 4 times an hour for a total of 10 minutes."
+          },
+          {
+            "question": "How soon before a hot water event does the SmartPlus begin to pulse?",
+            "answers": [
+              "15 minutes",
+              "30 minutes",
+              "One hour",
+              "Two hours"
+            ],
+            "correctIndex": 2,
+            "module": "Question 11",
+            "lesson": 6,
+            "feedback": "The SmartPlus pulses over a two-hour window that starts one hour before the event, and ends one hour after."
+          },
+          {
+            "question": "The Hot-Link crossover valve can be installed either under the sink or at the hot water heater.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 12",
+            "lesson": 6,
+            "feedback": "The Hot-Link valve goes under the sink, and the 006 pump gets installed at the water heater."
+          },
+          {
+            "question": "The Hot-Link is designed to work with the 006 Plumb n' Plug.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 13",
+            "lesson": 6,
+            "feedback": "The 006 has more than enough capacity to handle as many Hot-Link valves as you want to install."
+          },
+          {
+            "question": "The Hot-Link crossover valve combines a wax element with a thermal sensor.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 14",
+            "lesson": 6,
+            "feedback": "The Hot-Link replaces trouble-prone wax elements with a durable sensor disk."
+          },
+          {
+            "question": "How many Hot-Link valves can you use with one controller?",
+            "answers": [
+              "1",
+              "2",
+              "4",
+              "As many as you want"
+            ],
+            "correctIndex": 3,
+            "module": "Question 15",
+            "lesson": 6,
+            "feedback": "You can use as many Hot-Link valves as you want."
+          },
+          {
+            "question": "The Hot-Link is available in only one configuration, for use with the 006 circulator.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 16",
+            "lesson": 6,
+            "feedback": "The 006 is more than adequate.  The 008 or 0011 configurations would be overkill."
+          }
+        ]
+      }
+    ]
+  }
+]
