@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     
     //Score keeping
     
-    var numberCorrect:Int = 0
+    var numberCorrect:Int = 1
     var quizPassed:Int = 0
 
     
