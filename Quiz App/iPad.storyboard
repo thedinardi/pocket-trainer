@@ -23,6 +23,8 @@
             <string>MyriadPro-Semibold</string>
             <string>MyriadPro-Semibold</string>
             <string>MyriadPro-Semibold</string>
+            <string>MyriadPro-Semibold</string>
+            <string>MyriadPro-Semibold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1116,8 +1118,8 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uuk-kH-Vwd">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="60"/>
+                                        <color key="textColor" red="0.49019607843137253" green="0.062745098039215685" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1126,6 +1128,7 @@
                                     <constraint firstAttribute="trailing" secondItem="Uuk-kH-Vwd" secondAttribute="trailing" constant="10" id="AZx-Bs-c1D"/>
                                     <constraint firstItem="Uuk-kH-Vwd" firstAttribute="centerY" secondItem="UEy-Qv-0Zb" secondAttribute="centerY" id="fb3-ck-YUK"/>
                                     <constraint firstItem="Uuk-kH-Vwd" firstAttribute="centerX" secondItem="UEy-Qv-0Zb" secondAttribute="centerX" id="opL-JX-e1s"/>
+                                    <constraint firstItem="Uuk-kH-Vwd" firstAttribute="top" secondItem="UEy-Qv-0Zb" secondAttribute="top" constant="250" id="zl6-Jp-luA"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -1136,6 +1139,7 @@
                                         <exclude reference="AZx-Bs-c1D"/>
                                         <exclude reference="fb3-ck-YUK"/>
                                         <exclude reference="opL-JX-e1s"/>
+                                        <exclude reference="zl6-Jp-luA"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular">
@@ -1145,24 +1149,25 @@
                                     <mask key="constraints">
                                         <include reference="3EW-tJ-DIW"/>
                                         <include reference="AZx-Bs-c1D"/>
-                                        <include reference="fb3-ck-YUK"/>
-                                        <include reference="opL-JX-e1s"/>
+                                        <exclude reference="fb3-ck-YUK"/>
+                                        <exclude reference="opL-JX-e1s"/>
+                                        <include reference="zl6-Jp-luA"/>
                                     </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xA3-8v-rhf" userLabel="FeedbackView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some Feedback" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xL-FT-1tE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some Feedback" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xL-FT-1tE">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="45"/>
+                                        <color key="textColor" red="0.49019607843137253" green="0.062745098039215685" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="2xL-FT-1tE" firstAttribute="leading" secondItem="xA3-8v-rhf" secondAttribute="leading" constant="10" id="Cvg-Xq-A3f"/>
-                                    <constraint firstItem="2xL-FT-1tE" firstAttribute="top" secondItem="xA3-8v-rhf" secondAttribute="top" constant="250" id="HLY-qc-6kq"/>
+                                    <constraint firstItem="2xL-FT-1tE" firstAttribute="top" secondItem="xA3-8v-rhf" secondAttribute="top" constant="150" id="HLY-qc-6kq"/>
                                     <constraint firstItem="2xL-FT-1tE" firstAttribute="centerX" secondItem="xA3-8v-rhf" secondAttribute="centerX" id="bYO-Nm-a73"/>
                                     <constraint firstItem="2xL-FT-1tE" firstAttribute="centerY" secondItem="xA3-8v-rhf" secondAttribute="centerY" id="hg4-lf-J5n"/>
                                     <constraint firstAttribute="trailing" secondItem="2xL-FT-1tE" secondAttribute="trailing" constant="10" id="zfd-wg-lEu"/>
