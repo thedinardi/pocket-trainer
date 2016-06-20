@@ -9,6 +9,7 @@
 import UIKit
 import AVKit
 import AVFoundation
+import Parse
 
 class CoursesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -46,15 +47,10 @@ class CoursesViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
-        let userLoginStored = NSUserDefaults.standardUserDefaults().boolForKey("isUserLogin")
-        
-        if userLoginStored == true {
-            return
-        }else{
+
+        if PFUser.currentUser() == nil {
             self.performSegueWithIdentifier("login", sender: self)
         }
-        
 
     }
 

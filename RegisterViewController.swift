@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class RegisterViewController: UIViewController {
     
@@ -79,11 +80,9 @@ class RegisterViewController: UIViewController {
         
         //Check for empty fields
         
-        if (userEmail!.isEmpty || userPassword!.isEmpty || userConfirmPassword!.isEmpty) {
-            
+        if (userName!.isEmpty || userEmail!.isEmpty || userPassword!.isEmpty || userConfirmPassword!.isEmpty) {
             
             //Display alert message
-            
             displayMyAlertMessage("All fields are required");
             
             return
@@ -100,26 +99,25 @@ class RegisterViewController: UIViewController {
         }
         
         //Store data
-        NSUserDefaults.standardUserDefaults().setObject(userEmail, forKey: "userEmail");
-        NSUserDefaults.standardUserDefaults().setObject(userPassword, forKey: "userPassword");
-        NSUserDefaults.standardUserDefaults().setObject(userName, forKey: "userName");
-        NSUserDefaults.standardUserDefaults().synchronize()
-        
-        
-        
-        
-        //Display alert message with confirmation
-        
-        let myAlert = UIAlertController(title: "Congratulations", message: "Registration is successful.  Thank You!", preferredStyle: UIAlertControllerStyle.Alert);
-        
-        let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { action in
-            
-            self.dismissViewControllerAnimated(true, completion: nil)
+        let user = PFUser()
+        user.email = userEmail
+        user.username = userEmail
+        user.password = userPassword
+        //TODO: add name with subclasses
+        user.signUpInBackgroundWithBlock { (success, error) in
+            if success {
+                //Display alert message with confirmation
+                let myAlert = UIAlertController(title: "Congratulations", message: "Registration is successful.  Thank You!", preferredStyle: UIAlertControllerStyle.Alert);
+                let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { action in
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }
+                
+                myAlert.addAction(okAction)
+                self.presentViewController(myAlert, animated: true, completion: nil)
+            } else {
+                print("Failed to sign up: \(error?.localizedDescription)")
+            }
         }
-        
-        myAlert.addAction(okAction)
-        self.presentViewController(myAlert, animated: true, completion: nil)
-        
         
     }
     

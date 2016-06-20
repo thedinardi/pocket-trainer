@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -75,31 +76,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func signinButtonTapped(sender: AnyObject) {
         
-        let userEmail = usernameField.text;
-        let userPassword = passwordField.text;
+        let userEmail = usernameField.text!;
+        let userPassword = passwordField.text!;
         
-        let userEmailStored = NSUserDefaults.standardUserDefaults().stringForKey("userEmail")
-        let userPasswordStored = NSUserDefaults.standardUserDefaults().stringForKey("userPassword")
-        
-        if (userEmailStored == userEmail) {
-            
-            if (userPasswordStored == userPassword) {
-                
-                //Login Successful
-                NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLogin");
-                NSUserDefaults.standardUserDefaults().synchronize()
+        PFUser.logInWithUsernameInBackground(userEmail, password: userPassword) { (user, error) in
+            if error == nil {
                 self.dismissViewControllerAnimated(true, completion: nil)
-                
-                
+            } else {
+                print("Sign in failed")
             }
-        }else {
-            
-            displayMyAlertMessage("Email or Password have been entered incorrectly.")
-            
-            
         }
         
         
+        
+        //displayMyAlertMessage("Email or Password have been entered incorrectly.")
     }
     
     func displayMyAlertMessage(userMessage:String) {
