@@ -6,7 +6,7 @@
         "id": 1,
         "name": "Why eLearning?",
         "lesson": 0,
-        "movieURL": "https://s3.amazonaws.com/elearningapp/Why+Elearning+Final+V1.mp4",
+        "movieURL": "https://s3.amazonaws.com/elearningapp/Why+Elearning+Final+V2.mp4",
         "quiz": [
           {
             "question": "What can eLearning do for you in your marketing program?",
@@ -52,7 +52,7 @@
         "id": 2,
         "name": "Why RM Studio?",
         "lesson": 1,
-        "movieURL": "https://s3.amazonaws.com/elearningapp/At+RM+Studio+Final+V3.mp4",
+        "movieURL": "https://s3.amazonaws.com/elearningapp/At+RM+Studio+Final+V4.mp4",
         "quiz": [
           {
             "question": "What is the first step to a successful eLearning program?",
@@ -86,7 +86,7 @@
         "id": 3,
         "name": "What Should I Do Next?",
         "lesson": 2,
-        "movieURL": "https://s3.amazonaws.com/elearningapp/Whats+next+V1.mp4",
+        "movieURL": "https://s3.amazonaws.com/elearningapp/Whats+next+V2.mp4",
         "quiz": [
           {
             "question": "The eLearning platform can be rebranded to your artwork and colors.",
