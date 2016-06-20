@@ -18,7 +18,7 @@ class Course: NSObject {
         self.name = jsonDictionary["name"] as! String
         let lessonsDicts = jsonDictionary["lessons"] as! [NSDictionary]
         self.lessons = lessonsDicts.map({Lesson(jsonDictionary: $0)})
-        //self.lessons.last!.isFinal = true
+        self.lessons.last!.isFinal = true
         
         
         

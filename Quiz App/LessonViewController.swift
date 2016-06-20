@@ -154,7 +154,7 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 
                 //show prompt to user explaining they need to complete other quizzes
                 
-                let title = "You must complete all previous lessons to take the Final Exam."
+                let title = "You must complete all previous lessons to take the Final Lesson."
                 
                 
                 //Quiz Alert

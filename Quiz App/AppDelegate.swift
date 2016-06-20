@@ -27,8 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let configuration = ParseClientConfiguration {
             $0.applicationId = "PocketTrainer4545"
             $0.clientKey = ""
-            $0.server = "http://localhost:1337/parse"
+            //$0.server = "http://localhost:1337/parse"
             //$0.server = "http://192.168.0.102:1337/parse"
+            $0.server = "http://parseserver-836sq-env.us-east-1.elasticbeanstalk.com/parse"
         }
         
         Parse.initializeWithConfiguration(configuration)

@@ -86,7 +86,42 @@
         "id": 3,
         "name": "What Should I Do Next?",
         "lesson": 2,
-        "movieURL": "https://s3.amazonaws.com/elearningapp/Whats+next+V1.mp4"
+        "movieURL": "https://s3.amazonaws.com/elearningapp/Whats+next+V1.mp4",
+        "quiz": [
+          {
+            "question": "The eLearning platform can be rebranded to your artwork and colors.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "module": "Question 1",
+            "lesson": 3,
+            "feedback": "The entire eLearning app and platform can be customized to fit YOUR brand."
+          },
+          {
+            "question": "The app can be delivered in a secure environment.",
+            "answers": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "module": "Question 2",
+            "lesson": 3,
+            "feedback": "Using YouTube to host your training videos has many differnt downfalls."
+          },
+          {
+            "question": "Do you think you would use this eLearning platform?",
+			"answers": [
+              "Yes",
+              "No"
+            ],
+            "correctIndex": 0,
+            "module": "Question 2",
+            "lesson": 3,
+            "feedback": "Thanks for your feedback!"
+          }
+        ]
       }
     ]
   }

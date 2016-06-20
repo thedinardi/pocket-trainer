@@ -82,7 +82,7 @@ class ViewController: UIViewController {
         let alert:UIAlertController = UIAlertController(title: title, message: alertText, preferredStyle: UIAlertControllerStyle.Alert)
         
         //Warning Alert
-        let warning:UIAlertController = UIAlertController(title: "If you skip this you will not be eligible for PDHs. Continue?", message: alertText, preferredStyle: UIAlertControllerStyle.Alert)
+        let warning:UIAlertController = UIAlertController(title: "Are you sure you don't want to see the Quiz system?", message: alertText, preferredStyle: UIAlertControllerStyle.Alert)
         
         
         
