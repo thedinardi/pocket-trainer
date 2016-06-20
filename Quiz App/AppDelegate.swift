@@ -23,6 +23,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics.self, GameAnalytics.self])
         
         UINavigationBar.appearance().tintColor = UIColor.blueColor()
+        
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "PocketTrainer4545"
+            $0.clientKey = ""
+            $0.server = "http://localhost:1337/parse"
+            //$0.server = "http://192.168.0.102:1337/parse"
+        }
+        
+        Parse.initializeWithConfiguration(configuration)
+        
         return true
     }
     

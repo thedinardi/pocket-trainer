@@ -1,0 +1,94 @@
+[
+  {
+    "name": "The Benefits of eLearning",
+    "lessons": [
+      {
+        "id": 1,
+        "name": "Why eLearning?",
+        "lesson": 0,
+        "movieURL": "http://pstream.cdn1.arcostream.com/taco/elearn_jwplayer/FPU%20DHW%20Intro.m4v",
+        "quiz": [
+          {
+            "question": "On average, how much bigger are homes today than they were in the 70s?",
+            "answers": [
+              "40%",
+              "50%",
+              "60%",
+              "75%"
+            ],
+            "correctIndex": 1,
+            "module": "Question 1",
+            "lesson": 1,
+            "feedback": "In the 1970s the average home was 1,600 square feet. Homes today average 2,400 square feet."
+          },
+          {
+            "question": "According to the Department of Energy (DOE), how many gallons of water does the average family use in a day?",
+            "answers": [
+              "40",
+              "60",
+              "80",
+              "100"
+            ],
+            "correctIndex": 1,
+            "module": "Question 2",
+            "lesson": 1,
+            "feedback": "The average family uses about 60 gallons of water each day."
+          },
+          {
+            "question": "The DOE estimates a family of 4 can send how many gallons down the drain while waiting for hot qater to arrive.",
+            "answers": [
+              "8,000 gallons",
+              "10,000 gallons",
+              "12,000 gallons",
+              "14,000 gallons"
+            ],
+            "correctIndex": 2,
+            "module": "Question 3",
+            "lesson": 1,
+            "feedback": "The average family of 4 wastes about 12,000 gallons of water per year waiting for hot water."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Why RM Studio?",
+        "lesson": 1,
+        "movieURL": "http://pstream.cdn1.arcostream.com/taco/elearn_jwplayer/FPU%20DHW%20App%20Les1.mp4",
+        "quiz": [
+          {
+            "question": "On average, how much bigger are homes today than they were in the 70s?",
+            "answers": [
+              "40%",
+              "50%",
+              "60%",
+              "75%"
+            ],
+            "correctIndex": 1,
+            "module": "Question 1",
+            "lesson": 1,
+            "feedback": "In the 1970s the average home was 1,600 square feet. Homes today average 2,400 square feet."
+          },
+          {
+            "question": "According to the Department of Energy (DOE), how many gallons of water does the average family use in a day?",
+            "answers": [
+              "40",
+              "60",
+              "80",
+              "100"
+            ],
+            "correctIndex": 1,
+            "module": "Question 2",
+            "lesson": 1,
+            "feedback": "The average family uses about 60 gallons of water each day."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "What Should I Do Next?",
+        "lesson": 2,
+        "movieURL": "http://pstream.cdn1.arcostream.com/taco/elearn_jwplayer/FPU%20DHW%20App%20Les2.mp4"
+      }
+    ]
+  }
+]

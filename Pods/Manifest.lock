@@ -1,0 +1,25 @@
+PODS:
+  - Bolts/Tasks (1.7.0)
+  - Crashlytics (3.7.0):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.4)
+  - GA-SDK-IOS (2.2.0)
+  - Parse (1.13.0):
+    - Bolts/Tasks (~> 1.6)
+
+DEPENDENCIES:
+  - Crashlytics
+  - Fabric
+  - GA-SDK-IOS
+  - Parse
+
+SPEC CHECKSUMS:
+  Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
+  Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
+  Fabric: ed41fd62173c6bdea24ab02c9d7707161eabb750
+  GA-SDK-IOS: 1e8947d3b18171b92a7c7cefb4c39d3260a89ea2
+  Parse: f51c24d2feb412e4b2d6cc73d37cb24e8d0089bc
+
+PODFILE CHECKSUM: 0101a7ecbe96257ad9d87bb27cd2cc720e5abd26
+
+COCOAPODS: 1.0.0
