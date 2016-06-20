@@ -41,14 +41,11 @@ class LessonTableViewCell: UITableViewCell {
     func updateViewForLesson() {
         self.nameLabel.text = self.lesson.name
         
-        
-        
     
-        
 
         if User.currentUser.hasFullyCompletedLesson(lesson) {
             self.checkmarkImageView.hidden = false
-            self.lessonsComplete++
+            self.lessonsComplete += 1
         }
         else {
             self.checkmarkImageView.hidden = true
@@ -60,6 +57,9 @@ class LessonTableViewCell: UITableViewCell {
         self.nameLabel.text = self.course.name
         
         if User.currentUser.hasPassedFinalForCourse(course){
+            
+            
+            
         
         //if lessonsComplete == course.lessons.count - 1{
             self.checkmarkImageView.hidden = false

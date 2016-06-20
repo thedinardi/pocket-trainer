@@ -22,6 +22,7 @@ class CoursesViewController: UIViewController, UITableViewDataSource, UITableVie
         // Do any additional setup after loading the view.
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
+        
         do {
             
             
@@ -46,8 +47,15 @@ class CoursesViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        //if user is not logged in
-        //self.performSegueWithIdentifier("login", sender: self)
+        let userLoginStored = NSUserDefaults.standardUserDefaults().boolForKey("isUserLogin")
+        
+        if userLoginStored == true {
+            return
+        }else{
+            self.performSegueWithIdentifier("login", sender: self)
+        }
+        
+
     }
 
     override func didReceiveMemoryWarning() {

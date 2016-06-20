@@ -38,7 +38,7 @@ class FeedbackViewController: UIViewController {
         super.viewDidLoad()
 
         self.title = "Feedback"
-        let barItem = UIBarButtonItem(title: "Lessons", style: .Plain, target: self, action: "lessonsButtonTapped")
+        let barItem = UIBarButtonItem(title: "Lessons", style: .Plain, target: self, action: #selector(FeedbackViewController.lessonsButtonTapped))
         self.navigationItem.leftBarButtonItem = barItem
         
         
@@ -59,19 +59,6 @@ class FeedbackViewController: UIViewController {
         }
         
         
-        //Hide the dimView and result View
-        
-        //self.dimView.alpha = 0
-        //self.resultView.alpha = 0
-        
-        //Next Button bottom spacing
-        
-//        let bottomSpacing = self.view.frame.height / 20
-//        
-//        let bottomConstraint:NSLayoutConstraint = NSLayoutConstraint(item: nextButton2, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.BottomMargin, multiplier: 1, constant: bottomSpacing)
-//        
-//        self.view.addConstraint(bottomConstraint)
-//        
         
         
         
@@ -96,13 +83,7 @@ class FeedbackViewController: UIViewController {
         
         
     }
-    
-//    func showNavigationBar() {
-//        
-//        self.navigationController!.navigationBarHidden = false
-//    }
-    
-    
+        
 
     
     func displayCurrentQuestion() {
@@ -127,6 +108,10 @@ class FeedbackViewController: UIViewController {
             //Update the feedback text
             
             self.feedbackLabel2.text = self.currentQuestion!.feedback
+            
+            if (UI_USER_INTERFACE_IDIOM() == .Pad) {
+                self.feedbackLabel2.font = UIFont.systemFontOfSize(36)
+            }
             
             //Animate feedback text
             

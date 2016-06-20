@@ -23,13 +23,9 @@ class AnswerButtonView: UIView {
         
         //Set background and alpha
         
-        self.alpha = 0.5
-        self.backgroundColor = UIColor(red: 0/255, green: 131/255, blue: 60/255, alpha: 1)
-        //self.backgroundImage.frame = frame
-//        self.backgroundImage.image = UIImage(named: "green button")
-//        self.backgroundImage.contentMode = UIViewContentMode.ScaleAspectFill
-//        self.addSubview(self.backgroundImage)
-//        self.backgroundImage.translatesAutoresizingMaskIntoConstraints = false
+        self.alpha = 0.9
+        self.backgroundColor = UIColor(red: 13/255, green: 170/255, blue:234/255, alpha: 1)
+
         
 
         
@@ -64,7 +60,8 @@ class AnswerButtonView: UIView {
         
         //iPad font
         if (UI_USER_INTERFACE_IDIOM() == .Pad) {
-            self.answerLabel.font = UIFont.systemFontOfSize(25)
+            self.answerLabel.font = UIFont.systemFontOfSize(40)
+            self.answerNumberLabel.font = UIFont.systemFontOfSize(40)
         }
 
         
@@ -91,6 +88,11 @@ class AnswerButtonView: UIView {
         self.answerNumberLabel.backgroundColor = UIColor.blackColor()
         self.answerNumberLabel.alpha = 0.5
         self.answerNumberLabel.font = UIFont.boldSystemFontOfSize(14)
+        
+        //iPad font
+        if (UI_USER_INTERFACE_IDIOM() == .Pad) {
+            self.answerNumberLabel.font = UIFont.systemFontOfSize(40)
+        }
         
         //Set constraints
         let widthConstraint:NSLayoutConstraint = NSLayoutConstraint(item: self.answerNumberLabel, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 40)

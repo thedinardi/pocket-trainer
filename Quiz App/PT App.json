@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Getting Started with eLearning",
+    "lessons": [
+      {
+        "id": 1,
+        "name": "Why eLearning?",
+        "lesson": 0,
+        "movieURL": "https://s3.amazonaws.com/elearningapp/Why+Elearning+Final+V1.mp4",
+        "quiz": [
+          {
+            "question": "What can eLearning do for you in your marketing program?",
+            "answers": [
+              "Deliver a coherent, repeatable message to all stakeholders",
+              "Build brand loyalty in distribution channels",
+              "Provide valuable analytics",
+              "All of the above"
+            ],
+            "correctIndex": 3,
+            "module": "Question 1",
+            "lesson": 1,
+            "feedback": "Using eLearning in your marketing program can deliver coherent, repeatable content, build brand loyalty, provide valuable analytics, as well as many other things."
+          },
+          {
+            "question": "What percentage of compliance training is delivered online?",
+            "answers": [
+              "Less than 10%",
+              "Less than 30",
+              "More than 50%"
+            ],
+            "correctIndex": 2,
+            "module": "Question 2",
+            "lesson": 1,
+            "feedback": "More than 50% of compliance training is being delivered online for a variety of reasons.  Most important is consistency."
+          },
+          {
+            "question": "eLearning is a great way to reach, educate and motivate:",
+            "answers": [
+              "Distribution representatives",
+              "Individual sales representatives",
+              "End users",
+              "All of the above"
+            ],
+            "correctIndex": 3,
+            "module": "Question 3",
+            "lesson": 1,
+            "feedback": "eLearning is a great way to reach, educate and motivate everyone, internal and external."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Why RM Studio?",
+        "lesson": 1,
+        "movieURL": "https://s3.amazonaws.com/elearningapp/At+RM+Studio+Final+V3.mp4",
+        "quiz": [
+          {
+            "question": "What is the first step to a successful eLearning program?",
+            "answers": [
+              "Upload your how to videos to your YouTube channel",
+              "Get your current live training staff to deliver their next session in front of a video camera",
+              "Establish the goals of your eLearning effort and then design a program that will achieve those goals",
+              "All of the above"
+            ],
+            "correctIndex": 2,
+            "module": "Question 1",
+            "lesson": 2,
+            "feedback": "Through our own experience, we know that the first step for any successful eLearning program is to establish your goals."
+          },
+          {
+            "question": "Why not just put my support videos on my YouTube channel?",
+            "answers": [
+              "All content uploaded to YouTube becomes property of Google and your rights to it are relinquished",
+              "YouTube will recommend videos outside of your brand, possibly even to a competitor's page",
+              "Your viewer is taken offsite and to the world of funny cat videos",
+              "All of the above"
+            ],
+            "correctIndex": 3,
+            "module": "Question 2",
+            "lesson": 2,
+            "feedback": "Using YouTube to host your training videos has many differnt downfalls."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "What Should I Do Next?",
+        "lesson": 2,
+        "movieURL": "https://s3.amazonaws.com/elearningapp/Whats+next+V1.mp4"
+      }
+    ]
+  }
+]

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,25 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lessons bg" translatesAutoresizingMaskIntoConstraints="NO" id="tm3-pH-Lec">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RM launch screen iPad" translatesAutoresizingMaskIntoConstraints="NO" id="tm3-pH-Lec">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FPU App Header" translatesAutoresizingMaskIntoConstraints="NO" id="Bus-tO-qEi">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
-                                <animations/>
                             </imageView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Bus-tO-qEi" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="44V-Qj-EEa"/>
                             <constraint firstItem="tm3-pH-Lec" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="6ea-Dh-zgN"/>
-                            <constraint firstItem="Bus-tO-qEi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6xR-BV-EVM"/>
-                            <constraint firstItem="Bus-tO-qEi" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="Chq-dx-Ug1"/>
                             <constraint firstItem="tm3-pH-Lec" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="iHc-1u-7Wz"/>
                             <constraint firstItem="tm3-pH-Lec" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="qug-rD-4PP"/>
-                            <constraint firstItem="Bus-tO-qEi" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.12" id="sOG-1D-03P"/>
                             <constraint firstItem="tm3-pH-Lec" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="tBu-ff-kOd"/>
                         </constraints>
                     </view>
@@ -48,7 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="FPU App Header" width="360" height="69"/>
-        <image name="lessons bg" width="333" height="597"/>
+        <image name="RM launch screen iPad" width="682" height="910"/>
     </resources>
 </document>

@@ -43,6 +43,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultView: UIView!
     @IBOutlet weak var dimView: UIView!
     @IBOutlet weak var resultViewTopMargin: NSLayoutConstraint!
+    @IBOutlet weak var resultBG: UIImageView!
     
 
     
@@ -53,9 +54,11 @@ class ViewController: UIViewController {
     var quizFailSoundPlayer:AVAudioPlayer!
     var buttonClickSoundPlayer:AVAudioPlayer!
     
+    let gradient: CAGradientLayer = CAGradientLayer()
     
+
     
-    let rightImageName = "rightcheck.png"
+    let rightImageName = "RM Correct check.png"
     let wrongImageName = "wrongX.png"
 
     override func viewDidLoad() {
@@ -210,8 +213,6 @@ class ViewController: UIViewController {
             //Set the current question to first question
             self.currentQuestion = self.questions[0]
             
-            //Load state
-            //self.loadState()
             
             //Call the display question method
             self.displayCurrentQuestion()
@@ -219,14 +220,7 @@ class ViewController: UIViewController {
         }
     }
     
-//    func viewDidAppear(animated: Bool) {
-//        super.viewDidAppear(animated)
-//        //UIAlertController
-//        //if no
-//        //self.navigationController!.popViewControllerAnimated(true)
-//        //popToRootViewController
-//        
-//    }
+
     
     func displayCurrentQuestion() {
         
@@ -245,9 +239,7 @@ class ViewController: UIViewController {
                 
                 }, completion: nil)
             
-            
-            //Update the model and lesson label
-            //self.moduleLabel.text = String(format: "Module: %i Lesson: %i", actualCurrentQuestion.module, actualCurrentQuestion.lesson)
+
             
             //Create and display the answer button view
             self.createAnswerButtons()
@@ -261,7 +253,7 @@ class ViewController: UIViewController {
         
         
         var index:Int
-        for index = 0; index < self.currentQuestion?.answers.count; index++ {
+        for index = 0; index < self.currentQuestion?.answers.count; index += 1 {
             
             
             //Create an answer button view
@@ -275,13 +267,13 @@ class ViewController: UIViewController {
             
             //Add a tap gesture recognizer
             
-            let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "answerTapped:")
+            let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.answerTapped(_:)))
             
             answer.addGestureRecognizer(tapGesture)
             
             //Add constaints depending on what number button it is
             
-            //let heightConstraint:NSLayoutConstraint = NSLayoutConstraint(item: answer, attribute:NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 70)
+
             
             
             //iPad height
@@ -376,14 +368,12 @@ class ViewController: UIViewController {
                     self.correctSoundPlayer.play()
                     
                     //Change background of result view and button
-                    //self.resultView.backgroundColor = UIColor(red: 43/255, green: 85/255, blue: 81/255, alpha: 0.9)
-                    self.nextButton.backgroundColor = UIColor(red: 3/255, green: 85/255, blue: 27/255, alpha: 1)
-                    self.resultView.backgroundColor = UIColor(red: 0/255, green: 131/255, blue: 60/255, alpha: 1)
-                    resultTitleLabel.textColor = UIColor(red: 126/255, green: 238/255, blue: 105/255, alpha: 1)
-                    
+                    self.nextButton.backgroundColor = UIColor(red: 13/255, green: 170/255, blue: 234/255, alpha: 1)
+                    self.resultView.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 255/255, alpha: 0.6)
+                    resultTitleLabel.textColor = UIColor(red: 23/255, green: 65/255, blue: 235/255, alpha: 1)
                     feedbackLabel.text = ""
                     
-                    
+                    self.resultBG.image = UIImage(named: "RM Quiz BG.png")
                     self.resultImage.image = UIImage(named: rightImageName)
                     self.resultImage.contentMode = UIViewContentMode.ScaleAspectFill
                     
@@ -391,7 +381,7 @@ class ViewController: UIViewController {
                 
                     
                     //Increment user score
-                    self.numberCorrect++
+                    self.numberCorrect += 1
                     
                 }
                 else {
@@ -406,10 +396,10 @@ class ViewController: UIViewController {
                     self.wrongSoundPlayer.play()
                     
                     //Change background of result view and button
-                    self.resultView.backgroundColor = UIColor(red: 85/255, green: 19/255, blue: 12/255, alpha: 1)
+                    self.resultView.backgroundColor = UIColor(red: 85/255, green: 19/255, blue: 12/255, alpha: 0.9)
                     self.nextButton.backgroundColor = UIColor(red: 58/255, green: 0/255, blue: 16/255, alpha: 1)
                     resultTitleLabel.textColor = UIColor.whiteColor()
-                    
+                    self.resultBG.image = UIImage(named: "")
                     self.resultImage.image = UIImage(named: wrongImageName)
                     self.resultImage.contentMode = UIViewContentMode.ScaleAspectFill
                     
@@ -418,9 +408,6 @@ class ViewController: UIViewController {
                 }
                 
                 
-                //Set the feedback text
-                //self.feedbackLabel.text = self.currentQuestion!.feedback
-                //self.feedbackLabel.text = ""
                 
                 
                 //Set the button text to next
@@ -466,6 +453,7 @@ class ViewController: UIViewController {
             //Remove the dim view and result view
             self.dimView.alpha = 0
             self.resultView.alpha = 0
+            
             
             //Reset the score
             self.numberCorrect = 0
@@ -559,15 +547,16 @@ class ViewController: UIViewController {
                     
                     self.quizPassSoundPlayer.play()
                     
-                    self.resultView.backgroundColor = UIColor(red: 0/255, green: 131/255, blue: 60/255, alpha: 1)
-                    self.nextButton.backgroundColor = UIColor(red: 3/255, green: 85/255, blue: 27/255, alpha: 0.8)
+                    self.resultView.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 255/255, alpha: 0.6)
+                    self.nextButton.backgroundColor = UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 0.8)
                     self.view.layoutIfNeeded()
                     
                     self.resultTitleLabel.text = "Quiz Finished"
-                    feedbackLabel.textColor = UIColor(red: 111/255, green: 239/255, blue: 86/255, alpha: 1)
+                    feedbackLabel.textColor = UIColor(red: 23/255, green: 65/255, blue: 235/255, alpha: 1)
                     self.feedbackLabel.text = String(format: "Your Score is %i / %i", self.numberCorrect, self.questions.count)
                     self.nextButton.setTitle("Review Quiz", forState: UIControlState.Normal)
-                    self.resultImage.image = UIImage(named: "")
+                    self.resultImage.image = UIImage(named: rightImageName)
+                    self.resultBG.image = UIImage(named: "RM Quiz BG.png")
                     
                     self.dimView.alpha = 1
                     self.resultView.alpha = 1
@@ -582,7 +571,7 @@ class ViewController: UIViewController {
                     
                     self.quizFailSoundPlayer.play()
                     
-                    self.resultView.backgroundColor = UIColor(red: 85/255, green: 19/255, blue: 12/255, alpha: 1)
+                    self.resultView.backgroundColor = UIColor(red: 85/255, green: 19/255, blue: 12/255, alpha: 0.6)
                     self.nextButton.backgroundColor = UIColor(red: 58/255, green: 0/255, blue: 16/255, alpha: 0.8)
                     self.view.layoutIfNeeded()
                     
@@ -590,7 +579,7 @@ class ViewController: UIViewController {
                     self.feedbackLabel.text = String(format: "Your Score is %i / %i", self.numberCorrect, self.questions.count)
                     self.feedbackLabel.textColor = UIColor.redColor()
                     self.nextButton.setTitle("Restart Quiz", forState: UIControlState.Normal)
-                    self.resultImage.image = UIImage(named: "")
+                    self.resultImage.image = UIImage(named: wrongImageName)
                     
                     self.dimView.alpha = 1
                     self.resultView.alpha = 1

@@ -36,12 +36,6 @@ class User: NSObject {
     }
     
     func completedQuiz(lesson : Lesson, percent: Float) {
-        //has the user already taken the quiz
-//        if self.quizResultsForLesson(lesson) != nil && self.quizResultsForLesson(lesson) < percent {
-//            print("user has scored higher before")
-//        } else {
-//            self.quizResults[lesson.id] = percent
-//        }
         
         self.quizResults[lesson.id] = percent
         self.saveData()
@@ -68,18 +62,9 @@ class User: NSObject {
     }
     
     func hasPassedFinalForCourse(course : Course) -> Bool {
-//        for lesson in course.lessons {
-//            
-//            if lesson.isFinal && self.hasFullyCompletedLesson(lesson){
-//            
-//                
-//            }else if !self.hasFullyCompletedLesson(lesson) {
-//                return false
-//            }
-//        }
+
         return self.hasFullyCompletedLesson(course.lessons.last!)
         
-       //return true
     }
 
     

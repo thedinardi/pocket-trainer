@@ -19,7 +19,7 @@ class CourseManager: NSObject {
     
     var courses : [Course] {
              // Get an NSURL object pointing to the json file in our app bundle
-            let jsonPath:String = NSBundle.mainBundle().pathForResource("FPU TU Courses", ofType: "json")!
+            let jsonPath:String = NSBundle.mainBundle().pathForResource("PT App", ofType: "json")!
             let urlPath:NSURL = NSURL(fileURLWithPath: jsonPath)
             let jsonData:NSData = NSData(contentsOfURL: urlPath)!
 

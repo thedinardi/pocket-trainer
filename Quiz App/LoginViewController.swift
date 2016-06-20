@@ -16,13 +16,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var forgotUserButton: UIButton!
     @IBOutlet weak var forgotPassButton: UIButton!
-
     @IBOutlet weak var registerButton: UIButton!
 
-    
-    
-    
-    
+
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,13 +27,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         self.usernameField.delegate = self
         self.passwordField.delegate = self
-        
-        
         self.forgotUserButton.titleLabel!.textAlignment = NSTextAlignment.Left
         self.forgotPassButton.titleLabel!.textAlignment = NSTextAlignment.Left
         self.registerButton.titleLabel!.textAlignment = NSTextAlignment.Left
-
-        
+        forgotPassButton.titleLabel!.adjustsFontSizeToFitWidth = true
+        registerButton.titleLabel!.adjustsFontSizeToFitWidth = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,9 +50,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func textDoneEditing(textField: UITextField) {
         
         //When user has finished editing the texfield
-        
-        
-        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -65,18 +57,62 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //Dismiss keyboard with return key
         self.dismissKeyboard()
         self.usernameField.endEditing(true)
-        
         return true
     }
     
-    
     func dismissKeyboard() {
-        
         //Dismiss
         self.usernameField.resignFirstResponder()
         self.passwordField.resignFirstResponder()
         
     }
+    
+
+    @IBAction func registerButtonTapped(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("registerSegue", sender: nil)
+    }
+    
+    @IBAction func signinButtonTapped(sender: AnyObject) {
+        
+        let userEmail = usernameField.text;
+        let userPassword = passwordField.text;
+        
+        let userEmailStored = NSUserDefaults.standardUserDefaults().stringForKey("userEmail")
+        let userPasswordStored = NSUserDefaults.standardUserDefaults().stringForKey("userPassword")
+        
+        if (userEmailStored == userEmail) {
+            
+            if (userPasswordStored == userPassword) {
+                
+                //Login Successful
+                NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLogin");
+                NSUserDefaults.standardUserDefaults().synchronize()
+                self.dismissViewControllerAnimated(true, completion: nil)
+                
+                
+            }
+        }else {
+            
+            displayMyAlertMessage("Email or Password have been entered incorrectly.")
+            
+            
+        }
+        
+        
+    }
+    
+    func displayMyAlertMessage(userMessage:String) {
+        
+        let myAlert = UIAlertController(title: "", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+        
+        myAlert.addAction(okAction)
+        
+        self.presentViewController(myAlert, animated: true, completion: nil)
+    }
+    
     
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.Portrait
