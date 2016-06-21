@@ -14,13 +14,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var signinButton: UIButton!
-    
     @IBOutlet weak var forgotUserButton: UIButton!
     @IBOutlet weak var forgotPassButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
 
-
- 
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -75,20 +72,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func signinButtonTapped(sender: AnyObject) {
-        
         let userEmail = usernameField.text!;
         let userPassword = passwordField.text!;
-        
         PFUser.logInWithUsernameInBackground(userEmail, password: userPassword) { (user, error) in
             if error == nil {
                 self.dismissViewControllerAnimated(true, completion: nil)
             } else {
                 print("Sign in failed")
+                self.displayMyAlertMessage("Email or Password have been entered incorrectly.")
             }
         }
-        
-        
-        
+
         //displayMyAlertMessage("Email or Password have been entered incorrectly.")
     }
     

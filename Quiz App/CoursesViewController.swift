@@ -15,27 +15,18 @@ class CoursesViewController: UIViewController, UITableViewDataSource, UITableVie
 
     @IBOutlet weak var tableView: UITableView!
     var buttonClickSoundPlayer:AVAudioPlayer!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Courses"
         // Do any additional setup after loading the view.
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        
-        
         do {
-            
-            
             let buttonClickSoundUrl:NSURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("button click", ofType: "mp3")!)
-            
             self.buttonClickSoundPlayer = try AVAudioPlayer(contentsOfURL: buttonClickSoundUrl)
-            
         }
         catch {
-            
             //If some error occurs execution comes into here
-            
         }
     }
     

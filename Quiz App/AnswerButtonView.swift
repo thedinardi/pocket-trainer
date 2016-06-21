@@ -9,15 +9,11 @@
 import UIKit
 
 class AnswerButtonView: UIView {
-    
-    
-    
+
     let answerLabel = UILabel()
     let answerNumberLabel = UILabel()
     let backgroundImage = UIImageView()
-    
-    
-    
+
     override init(frame: CGRect) {
         super.init(frame:frame)
         
@@ -25,32 +21,23 @@ class AnswerButtonView: UIView {
         
         self.alpha = 0.9
         self.backgroundColor = UIColor(red: 13/255, green: 170/255, blue:234/255, alpha: 1)
-
-        
-
-        
+ 
         //Add the label to the view
         self.addSubview(self.answerLabel)
         self.answerLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        
+ 
         //Add the number label
         self.addSubview(self.answerNumberLabel)
         self.answerNumberLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 
-    
     func setAnswerText(text:String) {
         
         self.answerLabel.text = text
-        
         
         //Set properties for the label and constraints
         self.answerLabel.numberOfLines = 0
@@ -64,7 +51,6 @@ class AnswerButtonView: UIView {
             self.answerNumberLabel.font = UIFont.systemFontOfSize(40)
         }
 
-        
         //Set constraints
         let leftMarginConstraint = NSLayoutConstraint(item: self.answerLabel, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: NSLayoutAttribute.Left, multiplier: 1, constant: 40)
         
@@ -75,8 +61,6 @@ class AnswerButtonView: UIView {
         let bottomMarginConstraint = NSLayoutConstraint(item: self.answerLabel, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: -5)
         
         self.addConstraints([leftMarginConstraint, rightMarginConstraint, topMarginConstraint, bottomMarginConstraint])
-        
-        
     }
     
     func setAnswerNumber(answernumber:Int) {

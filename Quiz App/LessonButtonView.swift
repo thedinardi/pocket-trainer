@@ -10,12 +10,9 @@ import UIKit
 
 class LessonButtonView: UIView {
     
-    
     let lessonLabel:UILabel = UILabel()
     let answerNumberLabel:UILabel = UILabel()
-    
-    
-    
+
     override init(frame: CGRect) {
         super.init(frame:frame)
         
@@ -26,25 +23,21 @@ class LessonButtonView: UIView {
         //Add the label to the view
         self.addSubview(self.lessonLabel)
         self.lessonLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        
+
         //Add the number label
         self.addSubview(self.answerNumberLabel)
         self.answerNumberLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        
+
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
+
     func setLessonText(text:String) {
         
         self.lessonLabel.text = text
-        
-        
+
         //Set properties for the label and constraints
         self.lessonLabel.numberOfLines = 0
         self.lessonLabel.textColor = UIColor.whiteColor()

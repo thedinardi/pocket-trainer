@@ -16,8 +16,6 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var confirmTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var haveAccountButton: UIButton!
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +31,6 @@ class RegisterViewController: UIViewController {
     
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        
         //Dismiss keyboard
         self.emailTextField.resignFirstResponder()
         self.passwordTextField.resignFirstResponder()
@@ -44,14 +41,9 @@ class RegisterViewController: UIViewController {
     //TextField delegate methods
     func textDoneEditing(textField: UITextField) {
         
-        //When user has finished editing the texfield
-        
-        
-        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        
         //Dismiss keyboard with return key
         self.dismissKeyboard()
         self.emailTextField.endEditing(true)
@@ -61,16 +53,13 @@ class RegisterViewController: UIViewController {
     
     
     func dismissKeyboard() {
-        
         //Dismiss
         self.emailTextField.resignFirstResponder()
         self.passwordTextField.resignFirstResponder()
         self.confirmTextField.resignFirstResponder()
         self.nameTextField.resignFirstResponder()
-        
     }
-    
-    
+
     @IBAction func registerButtonTapped(sender: AnyObject) {
         
         let userEmail = emailTextField.text;
@@ -81,10 +70,8 @@ class RegisterViewController: UIViewController {
         //Check for empty fields
         
         if (userName!.isEmpty || userEmail!.isEmpty || userPassword!.isEmpty || userConfirmPassword!.isEmpty) {
-            
             //Display alert message
-            displayMyAlertMessage("All fields are required");
-            
+            displayMyAlertMessage("All fields are required")
             return
             
         }
@@ -92,7 +79,6 @@ class RegisterViewController: UIViewController {
         
         //Check if password match
         if (userPassword != userConfirmPassword) {
-            
             //Display alert
             displayMyAlertMessage("Passwords do not match")
             

@@ -17,23 +17,14 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
         var course : Course!
         var lesson : Lesson!
-
-
         @IBOutlet weak var tableView: UITableView!
-    
         var avPlayerViewController:AVPlayerViewController!
-    
         var selectedLesson : Lesson?
-    
         var buttonClickSoundPlayer:AVAudioPlayer!
-    
         var alertText : String = ""
-    
         var completeText : String = "You have completed the course!  A certificate has been emailed to you."
-
         @IBOutlet weak var courseLabel: UILabel!
     
-        
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view, typically from a nib.
@@ -66,29 +57,18 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //                
 //                
 //            }
-
-
-            
             do {
-                
-                
                 let buttonClickSoundUrl:NSURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("button click", ofType: "mp3")!)
-                
                 self.buttonClickSoundPlayer = try AVAudioPlayer(contentsOfURL: buttonClickSoundUrl)
-                
             }
             catch {
-                
                 //If some error occurs execution comes into here
-                
             }
-            
             let button = UIButton(type: UIButtonType.RoundedRect)
             button.frame = CGRectMake(20, 50, 100, 30)
             button.setTitle("Crash", forState: UIControlState.Normal)
             button.addTarget(self, action: #selector(VideoViewController.crashButtonTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             //view.addSubview(button)
-
         }
     func signoutButtonTapped() {
         
@@ -101,11 +81,8 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
         Crashlytics.sharedInstance().crash()
     }
 
-
     func updateCourseLabel () {
-        
         self.courseLabel.text = CourseManager.sharedInstance.currentCourse.name
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -113,8 +90,6 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.reloadData()
         self.navigationController!.navigationBarHidden = false
     }
- 
-    
         deinit {
             NSNotificationCenter.defaultCenter().removeObserver(self)
         }
@@ -127,21 +102,15 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
         func videoFinished (){
             print("Video Finished")
             User.currentUser.completedVideo(self.selectedLesson!)
-        
             
             if self.selectedLesson!.questions != nil {
                 self.performSegueWithIdentifier("showQuiz", sender: nil)
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
-            
             else {
-                
                 self.dismissViewControllerAnimated(true) { () -> Void in
-
                 }
             }
-            
-
         }
     
     func playVideo(row: Int) {
@@ -152,7 +121,6 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let movieURL = self.selectedLesson!.movieURL
         
         if self.selectedLesson!.isFinal == false {
-            
             self.avPlayerViewController = AVPlayerViewController()
             self.avPlayerViewController.player = AVPlayer(URL: movieURL!)
             self.presentViewController(avPlayerViewController, animated: true) { () -> Void in
@@ -164,19 +132,15 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
             if !User.currentUser.canTakeFinalForCourse(CourseManager.sharedInstance.currentCourse) {
                 
                 //show prompt to user explaining they need to complete other quizzes
-                
+        
                 let title = "You must complete all previous lessons to take the Final Lesson."
-                
                 
                 //Quiz Alert
                 let alert:UIAlertController = UIAlertController(title: title, message: alertText, preferredStyle: UIAlertControllerStyle.Alert)
                 
-                
                 //Alert yes button & actions
                 alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
                     (self.buttonClickSoundPlayer.play())
-                    
-                    
                 }))
                 
                 self.presentViewController(alert, animated: true, completion: nil)
@@ -191,32 +155,24 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 }
                 //self.performSegueWithIdentifier("showQuiz", sender: nil)
             }
-            
-            
+
         }
         
     func alertCompletion () {
-            
-            
+
             //Quiz Alert
             let alert:UIAlertController = UIAlertController(title: title, message: completeText, preferredStyle: UIAlertControllerStyle.Alert)
-            
-            
+        
             //Alert yes button & actions
             alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
                 (self.buttonClickSoundPlayer.play())
-                
                 
             }))
             
             self.presentViewController(alert, animated: true, completion: nil)
         
     }
-        
-
-
-
-            
+     
     }
 
     // MARK: - Navigation

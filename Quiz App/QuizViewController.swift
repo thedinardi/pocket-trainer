@@ -10,7 +10,6 @@ import UIKit
 import AVFoundation
 import Parse
 
-
 class ViewController: UIViewController {
     var lesson : Lesson!
     
@@ -24,42 +23,28 @@ class ViewController: UIViewController {
     var currentQuestion:Question?
     var answerButtonArray:[AnswerButtonView] = [AnswerButtonView]()
     var userAnswers:[Question] = [Question]()
-    
     var alertText:String = ""
-    
     var percentCorrect = Float()
-    
 
-    
     //Score keeping
     
     var numberCorrect:Int = 0
     var quizPassed:Int = 0
 
-    
     //Result view properties
     
     @IBOutlet weak var resultTitleLabel: UILabel!
-
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var resultView: UIView!
     @IBOutlet weak var dimView: UIView!
     @IBOutlet weak var resultViewTopMargin: NSLayoutConstraint!
     @IBOutlet weak var resultBG: UIImageView!
-    
-
-    
-    
     var correctSoundPlayer:AVAudioPlayer!
     var wrongSoundPlayer:AVAudioPlayer!
     var quizPassSoundPlayer:AVAudioPlayer!
     var quizFailSoundPlayer:AVAudioPlayer!
     var buttonClickSoundPlayer:AVAudioPlayer!
-    
     let gradient: CAGradientLayer = CAGradientLayer()
-    
-
-    
     let rightImageName = "RM Correct check.png"
     let wrongImageName = "wrongX.png"
 
@@ -89,16 +74,12 @@ class ViewController: UIViewController {
         //Warning Alert
         let warning:UIAlertController = UIAlertController(title: "Are you sure you don't want to see the Quiz system?", message: alertText, preferredStyle: UIAlertControllerStyle.Alert)
         
-        
-        
-        
         //Warning yes button & actions
         warning.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action: UIAlertAction!) in
             
             self.buttonClickSoundPlayer.play()
             self.navigationController?.popViewControllerAnimated(true)
-            
-            
+    
         }))
         
         //Warning no button & actions
@@ -106,9 +87,7 @@ class ViewController: UIViewController {
             
             self.buttonClickSoundPlayer.play()
             self.presentViewController(alert, animated: true, completion: nil)
-            
-            
-            
+    
         }))
         
         //Alert yes button & actions
@@ -128,86 +107,50 @@ class ViewController: UIViewController {
             
         }))
 
-
-        
-     
-        
         //Present Quiz Yes/No
         self.presentViewController(alert, animated: true, completion: nil)
         
         //Initialize the audio players
         do {
-            
-        
             let correctSoundUrl:NSURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Correct answer", ofType: "mp3")!)
-        
             self.correctSoundPlayer = try AVAudioPlayer(contentsOfURL: correctSoundUrl)
-            
         }
         catch {
-            
             //If some error occurs execution comes into here
-            
         }
         do {
-            
-            
             let wrongSoundUrl:NSURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Wrong answer", ofType: "mp3")!)
-            
             self.wrongSoundPlayer = try AVAudioPlayer(contentsOfURL: wrongSoundUrl)
-            
         }
         catch {
-            
             //If some error occurs execution comes into here
-            
         }
         do {
-            
-            
             let quizPassSoundUrl:NSURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("quiz pass", ofType: "aif")!)
-            
             self.quizPassSoundPlayer = try AVAudioPlayer(contentsOfURL: quizPassSoundUrl)
-            
         }
         catch {
-            
             //If some error occurs execution comes into here
-            
         }
         do {
-            
-            
             let quizFailSoundUrl:NSURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Aww", ofType: "mp3")!)
-            
             self.quizFailSoundPlayer = try AVAudioPlayer(contentsOfURL: quizFailSoundUrl)
-            
         }
         catch {
-            
             //If some error occurs execution comes into here
-            
         }
         do {
-            
-            
             let buttonClickSoundUrl:NSURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("button click", ofType: "mp3")!)
-            
             self.buttonClickSoundPlayer = try AVAudioPlayer(contentsOfURL: buttonClickSoundUrl)
-            
         }
         catch {
-            
             //If some error occurs execution comes into here
-            
         }
-  
         
         //Hide the dimView and result View
         
         self.dimView.alpha = 0
         self.resultView.alpha = 0
-        
         
         //Get the questions from the quiz model
         self.questions = lesson.questions!
@@ -218,18 +161,13 @@ class ViewController: UIViewController {
             //Set the current question to first question
             self.currentQuestion = self.questions[0]
             
-            
             //Call the display question method
             self.displayCurrentQuestion()
             
         }
     }
-    
 
-    
     func displayCurrentQuestion() {
-        
-        
         if let actualCurrentQuestion = self.currentQuestion {
             
             self.questionLabel.alpha = 0
@@ -243,23 +181,16 @@ class ViewController: UIViewController {
                 self.questionLabel.alpha = 1
                 
                 }, completion: nil)
-            
 
-            
             //Create and display the answer button view
             self.createAnswerButtons()
-            
-
         }
     }
 
-    
     func createAnswerButtons() {
-        
-        
+
         var index:Int
         for index = 0; index < self.currentQuestion?.answers.count; index += 1 {
-            
             
             //Create an answer button view
             
@@ -269,7 +200,6 @@ class ViewController: UIViewController {
             //Place it into the content view
             self.scrollViewContentView.addSubview(answer)
             
-            
             //Add a tap gesture recognizer
             
             let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.answerTapped(_:)))
@@ -277,9 +207,6 @@ class ViewController: UIViewController {
             answer.addGestureRecognizer(tapGesture)
             
             //Add constaints depending on what number button it is
-            
-
-            
             
             //iPad height
             
@@ -292,8 +219,7 @@ class ViewController: UIViewController {
             answer.addConstraint(heightConstraint)
             
             let leftMarginConstraint:NSLayoutConstraint = NSLayoutConstraint(item: answer, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: self.scrollViewContentView, attribute: NSLayoutAttribute.Left, multiplier: 1, constant: 400)
-            
-            
+
             let rightMarginConstraint:NSLayoutConstraint = NSLayoutConstraint(item: answer, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: self.scrollViewContentView, attribute: NSLayoutAttribute.Right, multiplier: 1, constant: 400)
             
             let topMarginConstraint:NSLayoutConstraint = NSLayoutConstraint(item: answer, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.scrollViewContentView, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: (constantHeight + spacing) * CGFloat(index))
@@ -333,11 +259,7 @@ class ViewController: UIViewController {
                 leftMarginConstraint.constant = 0
                 rightMarginConstraint.constant = 0
                 self.view.layoutIfNeeded()
-                
-                
                 }, completion: nil)
-            
-            
         }
         
         //Adjust the height of the content view so that it can scroll if need be
@@ -349,8 +271,6 @@ class ViewController: UIViewController {
     }
     
     func answerTapped(gesture:UITapGestureRecognizer) {
-        
-        
         //Get access to the answer button that was tapped
         let answerButtonThatWasTapped:AnswerButtonView? = gesture.view as! AnswerButtonView?
         
@@ -377,26 +297,18 @@ class ViewController: UIViewController {
                     self.resultView.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 255/255, alpha: 0.6)
                     resultTitleLabel.textColor = UIColor(red: 23/255, green: 65/255, blue: 235/255, alpha: 1)
                     feedbackLabel.text = ""
-                    
                     self.resultBG.image = UIImage(named: "RM Quiz BG.png")
                     self.resultImage.image = UIImage(named: rightImageName)
                     self.resultImage.contentMode = UIViewContentMode.ScaleAspectFill
-                    
-                
-                
                     
                     //Increment user score
                     self.numberCorrect += 1
                     
                 }
                 else {
-                    
-
-                    
                     //User got it wrong
-                    
                     self.resultTitleLabel.text = "Incorrect"
-                    
+                
                     //Play wrong sound
                     self.wrongSoundPlayer.play()
                     
@@ -407,13 +319,8 @@ class ViewController: UIViewController {
                     self.resultBG.image = UIImage(named: "")
                     self.resultImage.image = UIImage(named: wrongImageName)
                     self.resultImage.contentMode = UIViewContentMode.ScaleAspectFill
-                    
                     feedbackLabel.text = ""
-                 
                 }
-                
-                
-                
                 
                 //Set the button text to next
                 self.nextButton.setTitle("Next", forState: UIControlState.Normal)
@@ -421,9 +328,7 @@ class ViewController: UIViewController {
                 //Set result view top margin constraint to high
                 self.resultViewTopMargin.constant = 900
                 self.view.layoutIfNeeded()
-                
-                
-                
+
                 //Display the dim view and the result view
                 UIView.animateWithDuration(0.4, animations: {
                     
@@ -433,21 +338,14 @@ class ViewController: UIViewController {
                     //Fade into view
                     self.dimView.alpha = 1
                     self.resultView.alpha = 1
-                    
-                    
                 })
-                
-
             }
         }
-        
     }
-
     @IBAction func changeQuestion(sender: UIButton) {
         
         self.buttonClickSoundPlayer.play()
-        
-        
+
         //QUIZ FAILED
         if self.nextButton.titleLabel?.text == "Restart Quiz" && self.questions.count > 0 {
             
@@ -458,23 +356,17 @@ class ViewController: UIViewController {
             //Remove the dim view and result view
             self.dimView.alpha = 0
             self.resultView.alpha = 0
-            
-            
+
             //Reset the score
             self.numberCorrect = 0
-            
-            
+
             return
-            
-            
-            
+
         }
         
         //QUIZ PASSED
         if self.nextButton.titleLabel?.text == "Review Quiz" && self.questions.count > 0 {
-            
-         
-            
+
             //Reset the question to the first question
             self.currentQuestion = self.questions[0]
             self.displayCurrentQuestion()
@@ -482,15 +374,11 @@ class ViewController: UIViewController {
             //Remove the dim view and result view
             self.dimView.alpha = 0
             self.resultView.alpha = 0
-            
-            
+
             //Reset the score
             self.numberCorrect = 0
             
             self.performSegueWithIdentifier("feedback", sender: self)
-            
-            
-        
         }
         
         //Dismiss dim & result view
@@ -530,89 +418,53 @@ class ViewController: UIViewController {
                 
             }
             else {
-                
-              
-                
-                
-                
+
                 //End the quiz
-                
-                
-                
+
                 self.percentCorrect = Float(numberCorrect) / Float(actualCurrentIndex)
                 User.currentUser.quizResultsForLesson(self.lesson)
                 User.currentUser.completedQuiz(self.lesson, percent: percentCorrect)
-                
-                
-                
+
                 if User.currentUser.hasPassedQuiz(self.lesson) {
                 
                 //if percentCorrect >= passPercent {
-                
-                    
+
                     self.quizPassSoundPlayer.play()
-                    
                     self.resultView.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 255/255, alpha: 0.6)
                     self.nextButton.backgroundColor = UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 0.8)
                     self.view.layoutIfNeeded()
-                    
                     self.resultTitleLabel.text = "Quiz Finished"
                     feedbackLabel.textColor = UIColor(red: 23/255, green: 65/255, blue: 235/255, alpha: 1)
                     self.feedbackLabel.text = String(format: "Your Score is %i / %i", self.numberCorrect, self.questions.count)
                     self.nextButton.setTitle("Review Quiz", forState: UIControlState.Normal)
                     self.resultImage.image = UIImage(named: rightImageName)
                     self.resultBG.image = UIImage(named: "RM Quiz BG.png")
-                    
                     self.dimView.alpha = 1
                     self.resultView.alpha = 1
                 }
-                
                 else {
-                    
-                    //Erase data
-                    //self.eraseState()
-                    
-                    
-                    
                     self.quizFailSoundPlayer.play()
-                    
                     self.resultView.backgroundColor = UIColor(red: 85/255, green: 19/255, blue: 12/255, alpha: 0.6)
                     self.nextButton.backgroundColor = UIColor(red: 58/255, green: 0/255, blue: 16/255, alpha: 0.8)
                     self.view.layoutIfNeeded()
-                    
                     self.resultTitleLabel.text = "Quiz Finished"
                     self.feedbackLabel.text = String(format: "Your Score is %i / %i", self.numberCorrect, self.questions.count)
                     self.feedbackLabel.textColor = UIColor.redColor()
                     self.nextButton.setTitle("Restart Quiz", forState: UIControlState.Normal)
                     self.resultImage.image = UIImage(named: wrongImageName)
-                    
                     self.dimView.alpha = 1
                     self.resultView.alpha = 1
-                    
                 }
-                
-                
-                
             }
         }
-        
-        
-        
     }
-    
-    
 
-    
     func signoutButtonTapped() {
-        
         PFUser.logOut()
         print("logout successful")
         self.navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
     }
 
-    
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

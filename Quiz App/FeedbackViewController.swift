@@ -11,21 +11,12 @@ import AVFoundation
 import Parse
 
 class FeedbackViewController: UIViewController {
-    
     var lesson: Lesson!
     var question: Question!
-
     @IBOutlet weak var questionLabel2: UILabel!
     @IBOutlet weak var feedbackLabel2: UILabel!
-
     @IBOutlet weak var nextButton2: UIButton!
 
-
-    
-    
-
-
-    
     //let model:QuizModel = QuizModel()
     var questions:[Question] = [Question]()
     var currentQuestion:Question?
@@ -34,38 +25,25 @@ class FeedbackViewController: UIViewController {
     var buttonClickSoundPlayer:AVAudioPlayer!
     var numberCorrect: Int = 0
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.title = "Feedback"
         let barItem = UIBarButtonItem(title: "Lessons", style: .Plain, target: self, action: #selector(self.lessonsButtonTapped))
         self.navigationItem.leftBarButtonItem = barItem
         let signoutButon = UIBarButtonItem(title: "Sign Out", style: .Plain, target: self, action: #selector(self.signoutButtonTapped))
         self.navigationItem.rightBarButtonItem = signoutButon
         
-        
         // Do any additional setup after loading the view, typically from a nib.
     
         do {
             
-            
             let buttonClickSoundUrl:NSURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("button click", ofType: "mp3")!)
-            
             self.buttonClickSoundPlayer = try AVAudioPlayer(contentsOfURL: buttonClickSoundUrl)
-            
         }
         catch {
-            
             //If some error occurs execution comes into here
-            
         }
-        
-        
-        
-        
-        
-        
+
         //Get the questions from the question model
         self.questions = lesson.questions!
         
@@ -80,17 +58,10 @@ class FeedbackViewController: UIViewController {
             
             //Call the display question method
             self.displayCurrentQuestion()
-            
         }
-        
-        
-        
     }
-        
 
-    
     func displayCurrentQuestion() {
-        
         
         if let actualCurrentQuestion = self.currentQuestion {
             
@@ -123,40 +94,25 @@ class FeedbackViewController: UIViewController {
                 self.feedbackLabel2.alpha = 1
                 
                 }, completion: nil)
-            
-
-    
-
         }
-
     }
-
-        
         
     func lessonsButtonTapped() {
         
         self.navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
         //self.showNavigationBar()
-        
     }
     
     func signoutButtonTapped() {
-        
         PFUser.logOut()
         print("logout successful")
         self.navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
     }
-        
-        
+
     @IBAction func nextButton2(sender: UIButton) {
-        
-        
+
         self.buttonClickSoundPlayer.play()
-        
-        
-        
-        
-        
+
         //Finding current index of question
         let indexofCurrentQuestion:Int? = self.questions.indexOf(self.currentQuestion!)
         
@@ -179,34 +135,15 @@ class FeedbackViewController: UIViewController {
         if nextQuestionIndex == self.questions.count - 1 {
             
             nextButton2.setTitle("Back to Lessons", forState: UIControlState.Normal)
-            
-            
-            
+ 
         }
         //Perform segue once Back to Lessons is pushed
         if nextQuestionIndex == self.questions.count {
             
             self.navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
-            
-            
-
-
-
         }
-            
-            
-
-        
     }
-    
 
-                
-
-
-
-
-        
-    
     func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
