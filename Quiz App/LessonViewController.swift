@@ -10,6 +10,8 @@ import UIKit
 import AVKit
 import AVFoundation
 import Crashlytics
+import Parse
+
 
 class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -38,6 +40,9 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
             self.navigationController!.navigationBarHidden = false
             self.title = "Lessons"
             self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+            
+            let signoutButon = UIBarButtonItem(title: "Sign Out", style: .Plain, target: self, action: #selector(self.signoutButtonTapped))
+            self.navigationItem.rightBarButtonItem = signoutButon
             
             NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(VideoViewController.videoFinished), name: AVPlayerItemDidPlayToEndTimeNotification, object: nil)
             
@@ -85,6 +90,12 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
             //view.addSubview(button)
 
         }
+    func signoutButtonTapped() {
+        
+        PFUser.logOut()
+        print("logout successful")
+        self.navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
+    }
     
     @IBAction func crashButtonTapped(sender: AnyObject) {
         Crashlytics.sharedInstance().crash()
@@ -201,6 +212,8 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
             self.presentViewController(alert, animated: true, completion: nil)
         
     }
+        
+
 
 
             

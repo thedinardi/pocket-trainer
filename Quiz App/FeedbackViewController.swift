@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import Parse
 
 class FeedbackViewController: UIViewController {
     
@@ -38,12 +39,14 @@ class FeedbackViewController: UIViewController {
         super.viewDidLoad()
 
         self.title = "Feedback"
-        let barItem = UIBarButtonItem(title: "Lessons", style: .Plain, target: self, action: #selector(FeedbackViewController.lessonsButtonTapped))
+        let barItem = UIBarButtonItem(title: "Lessons", style: .Plain, target: self, action: #selector(self.lessonsButtonTapped))
         self.navigationItem.leftBarButtonItem = barItem
+        let signoutButon = UIBarButtonItem(title: "Sign Out", style: .Plain, target: self, action: #selector(self.signoutButtonTapped))
+        self.navigationItem.rightBarButtonItem = signoutButon
         
         
         // Do any additional setup after loading the view, typically from a nib.
-        
+    
         do {
             
             
@@ -135,6 +138,13 @@ class FeedbackViewController: UIViewController {
         self.navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
         //self.showNavigationBar()
         
+    }
+    
+    func signoutButtonTapped() {
+        
+        PFUser.logOut()
+        print("logout successful")
+        self.navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
     }
         
         

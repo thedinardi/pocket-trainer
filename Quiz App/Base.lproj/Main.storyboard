@@ -163,7 +163,8 @@
                                         <variation key="heightClass=compact" misplaced="YES">
                                             <rect key="frame" x="270" y="248" width="120" height="36"/>
                                         </variation>
-                                        <variation key="heightClass=regular">
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="202" y="197" width="173" height="31"/>
                                             <mask key="constraints">
                                                 <include reference="Ko3-Av-CXq"/>
                                             </mask>
@@ -186,7 +187,8 @@
                                         <variation key="heightClass=compact" misplaced="YES">
                                             <rect key="frame" x="270" y="363" width="120" height="36"/>
                                         </variation>
-                                        <variation key="heightClass=regular">
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="202" y="266" width="143" height="27"/>
                                             <mask key="constraints">
                                                 <include reference="odn-vU-6P2"/>
                                             </mask>
@@ -772,7 +774,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="Pbx-IA-BNN"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="courseLabel" destination="dcc-Rv-iMW" id="xW5-JY-MxG"/>
