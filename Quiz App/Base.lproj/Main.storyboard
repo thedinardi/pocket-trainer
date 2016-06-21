@@ -163,8 +163,7 @@
                                         <variation key="heightClass=compact" misplaced="YES">
                                             <rect key="frame" x="270" y="248" width="120" height="36"/>
                                         </variation>
-                                        <variation key="heightClass=regular" misplaced="YES">
-                                            <rect key="frame" x="202" y="197" width="173" height="31"/>
+                                        <variation key="heightClass=regular">
                                             <mask key="constraints">
                                                 <include reference="Ko3-Av-CXq"/>
                                             </mask>
@@ -187,8 +186,7 @@
                                         <variation key="heightClass=compact" misplaced="YES">
                                             <rect key="frame" x="270" y="363" width="120" height="36"/>
                                         </variation>
-                                        <variation key="heightClass=regular" misplaced="YES">
-                                            <rect key="frame" x="202" y="266" width="143" height="27"/>
+                                        <variation key="heightClass=regular">
                                             <mask key="constraints">
                                                 <include reference="odn-vU-6P2"/>
                                             </mask>
@@ -247,7 +245,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
                                         <variation key="heightClass=regular">
                                             <mask key="constraints">
                                                 <exclude reference="JOc-Ck-nFn"/>
@@ -1495,7 +1493,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
                                         <variation key="heightClass=regular">
                                             <mask key="constraints">
                                                 <exclude reference="IHH-I7-ku4"/>

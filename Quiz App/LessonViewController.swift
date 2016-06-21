@@ -140,7 +140,7 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.selectedLesson = CourseManager.sharedInstance.currentCourse.lessons[row]
         let movieURL = self.selectedLesson!.movieURL
         
-        if self.selectedLesson!.isFinal != true {
+        if self.selectedLesson!.isFinal == false {
             
             self.avPlayerViewController = AVPlayerViewController()
             self.avPlayerViewController.player = AVPlayer(URL: movieURL!)
@@ -173,7 +173,12 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
             else {
                 
-                self.performSegueWithIdentifier("showQuiz", sender: nil)
+                self.avPlayerViewController = AVPlayerViewController()
+                self.avPlayerViewController.player = AVPlayer(URL: movieURL!)
+                self.presentViewController(avPlayerViewController, animated: true) { () -> Void in
+                    self.avPlayerViewController.player!.play()
+                }
+                //self.performSegueWithIdentifier("showQuiz", sender: nil)
             }
             
             
