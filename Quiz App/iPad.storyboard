@@ -491,9 +491,6 @@
                                             <subviews>
                                                 <imageView alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="blue button ipad" translatesAutoresizingMaskIntoConstraints="NO" id="fYr-Sx-044">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
-                                                    <variation key="heightClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="0.0" y="1" width="768" height="165"/>
-                                                    </variation>
                                                     <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                         <rect key="frame" x="0.0" y="0.0" width="1366" height="165"/>
                                                     </variation>
@@ -550,9 +547,6 @@
                                                             <include reference="Ve9-v1-wWh"/>
                                                             <include reference="dYv-Xu-eSC"/>
                                                         </mask>
-                                                    </variation>
-                                                    <variation key="heightClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="582" y="33" width="100" height="100"/>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                         <rect key="frame" x="1180" y="33" width="100" height="100"/>
@@ -1023,9 +1017,6 @@
                                         <variation key="heightClass=compact" ambiguous="YES">
                                             <rect key="frame" x="0.0" y="0.0" width="187" height="0.0"/>
                                         </variation>
-                                        <variation key="heightClass=regular" ambiguous="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
-                                        </variation>
                                         <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="0.0" y="0.0" width="1366" height="0.0"/>
                                         </variation>
@@ -1033,16 +1024,39 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="M3B-4D-SBg" firstAttribute="top" secondItem="71b-bk-A7n" secondAttribute="top" id="3Ju-ba-bfP"/>
+                                    <constraint firstItem="M3B-4D-SBg" firstAttribute="width" secondItem="71b-bk-A7n" secondAttribute="width" id="9sc-pe-dRv"/>
+                                    <constraint firstItem="M3B-4D-SBg" firstAttribute="centerY" secondItem="71b-bk-A7n" secondAttribute="centerY" id="Lao-HH-Z1K"/>
                                     <constraint firstItem="M3B-4D-SBg" firstAttribute="width" secondItem="71b-bk-A7n" secondAttribute="width" id="SIG-BC-veI"/>
                                     <constraint firstAttribute="bottom" secondItem="M3B-4D-SBg" secondAttribute="bottom" id="Xb7-3g-bxv"/>
                                     <constraint firstItem="M3B-4D-SBg" firstAttribute="leading" secondItem="71b-bk-A7n" secondAttribute="leading" id="by4-at-eFS"/>
                                     <constraint firstAttribute="trailing" secondItem="M3B-4D-SBg" secondAttribute="trailing" id="qA0-dt-0Si"/>
+                                    <constraint firstItem="M3B-4D-SBg" firstAttribute="centerX" secondItem="71b-bk-A7n" secondAttribute="centerX" id="t7j-ZO-Dbo"/>
+                                    <constraint firstItem="M3B-4D-SBg" firstAttribute="height" secondItem="71b-bk-A7n" secondAttribute="height" id="yhk-y2-gjl"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9sc-pe-dRv"/>
+                                        <exclude reference="Lao-HH-Z1K"/>
+                                        <exclude reference="t7j-ZO-Dbo"/>
+                                        <exclude reference="yhk-y2-gjl"/>
+                                    </mask>
+                                </variation>
                                 <variation key="heightClass=compact" ambiguous="YES">
                                     <rect key="frame" x="188" y="0.0" width="187" height="667"/>
                                 </variation>
                                 <variation key="heightClass=regular" ambiguous="YES">
                                     <rect key="frame" x="0.0" y="400" width="600" height="400"/>
+                                    <mask key="constraints">
+                                        <exclude reference="3Ju-ba-bfP"/>
+                                        <include reference="9sc-pe-dRv"/>
+                                        <include reference="Lao-HH-Z1K"/>
+                                        <exclude reference="SIG-BC-veI"/>
+                                        <exclude reference="Xb7-3g-bxv"/>
+                                        <exclude reference="by4-at-eFS"/>
+                                        <exclude reference="qA0-dt-0Si"/>
+                                        <include reference="t7j-ZO-Dbo"/>
+                                        <include reference="yhk-y2-gjl"/>
+                                    </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
                                     <rect key="frame" x="0.0" y="400" width="400" height="400"/>
@@ -1069,9 +1083,6 @@
                                         <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="70" width="540" height="38"/>
-                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Some Feedback" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mJ1-nl-8LN">
                                         <rect key="frame" x="20" y="60" width="500" height="956"/>
@@ -1891,7 +1902,7 @@
                                         <include reference="lQp-p0-nqN"/>
                                         <exclude reference="LaC-cM-F83"/>
                                         <include reference="M7r-uN-jPt"/>
-                                        <include reference="b97-f1-3OG"/>
+                                        <exclude reference="b97-f1-3OG"/>
                                         <include reference="5WH-Bm-hX0"/>
                                         <include reference="S8g-Cf-Crw"/>
                                         <include reference="o3s-mF-uOb"/>
