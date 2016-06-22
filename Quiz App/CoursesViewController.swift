@@ -37,6 +37,18 @@ class CoursesViewController: UIViewController, UITableViewDataSource, UITableVie
                 self.tableView.reloadData()
             } else {
                 //TODO: Display an alert to the user to check their internet connection
+                
+                //Quiz Alert
+                let alert:UIAlertController = UIAlertController(title: "", message: "Please check your internet connection.", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                //Alert yes button & actions
+                alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+                    (self.buttonClickSoundPlayer.play())
+                }))
+                
+                self.presentViewController(alert, animated: true, completion: nil)
+                
+                
             }
         }
         

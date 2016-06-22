@@ -168,7 +168,7 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
             self.presentViewController(alert, animated: true, completion: nil)
         
     }
-     
+    
 
     // MARK: - Navigation
 
