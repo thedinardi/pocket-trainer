@@ -440,6 +440,25 @@ class ViewController: UIViewController {
                     self.resultBG.image = UIImage(named: "RM Quiz BG.png")
                     self.dimView.alpha = 1
                     self.resultView.alpha = 1
+                    
+                    //COURSE COMPLETION NOTIFICATION AND EMAIL TO BE SENT
+                    if User.currentUser.hasPassedFinalForCourse(CourseManager.sharedInstance.currentCourse) {
+                        
+                        //Quiz Alert
+                        let alert = UIAlertController(title: "Congratulations!", message: "You have completed the course!  A certificate will be emailed to you.", preferredStyle: UIAlertControllerStyle.Alert)
+                        
+                        
+                        //Alert yes button & actions
+                        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+                            (self.buttonClickSoundPlayer.play())
+                        }))
+                        
+                        self.presentViewController(alert, animated: true, completion: nil)
+                        
+                    }
+                    
+                    
+                    
                 }
                 else {
                     self.quizFailSoundPlayer.play()

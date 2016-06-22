@@ -15,61 +15,46 @@ import Parse
 
 class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-        var course : Course!
-        var lesson : Lesson!
-        @IBOutlet weak var tableView: UITableView!
-        var avPlayerViewController:AVPlayerViewController!
-        var selectedLesson : Lesson?
-        var buttonClickSoundPlayer:AVAudioPlayer!
-        var alertText : String = ""
-        var completeText : String = "You have completed the course!  A certificate will be emailed to you."
-        @IBOutlet weak var courseLabel: UILabel!
-    
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            // Do any additional setup after loading the view, typically from a nib.
-            self.navigationController!.navigationBarHidden = false
-            self.title = "Lessons"
-            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-            
-            let signoutButon = UIBarButtonItem(title: "Sign Out", style: .Plain, target: self, action: #selector(self.signoutButtonTapped))
-            self.navigationItem.rightBarButtonItem = signoutButon
-            
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(VideoViewController.videoFinished), name: AVPlayerItemDidPlayToEndTimeNotification, object: nil)
-            
-            self.updateCourseLabel()
-            
-//            //COURSE COMPLETION NOTIFICATION AND EMAIL TO BE SENT
-//            if User.currentUser.hasPassedFinalForCourse(course) {
-//                
-//                //Quiz Alert
-//                let alert:UIAlertController = UIAlertController(title: "Congratulations!", message: completeText, preferredStyle: UIAlertControllerStyle.Alert)
-//                
-//                
-//                //Alert yes button & actions
-//                alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
-//                    (self.buttonClickSoundPlayer.play())
-//                    
-//                    
-//                }))
-//                
-//                self.presentViewController(alert, animated: true, completion: nil)
-//                
-//                
-//            }
-            do {
-                let buttonClickSoundUrl:NSURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("button click", ofType: "mp3")!)
-                self.buttonClickSoundPlayer = try AVAudioPlayer(contentsOfURL: buttonClickSoundUrl)
-            }
-            catch {
-                //If some error occurs execution comes into here
-            }
-            let button = UIButton(type: UIButtonType.RoundedRect)
-            button.frame = CGRectMake(20, 50, 100, 30)
-            button.setTitle("Crash", forState: UIControlState.Normal)
-            button.addTarget(self, action: #selector(VideoViewController.crashButtonTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
-            //view.addSubview(button)
+    var course : Course!
+    var lesson : Lesson!
+    @IBOutlet weak var tableView: UITableView!
+    var avPlayerViewController:AVPlayerViewController!
+    var selectedLesson : Lesson?
+    var buttonClickSoundPlayer:AVAudioPlayer!
+    var alertText : String = ""
+    @IBOutlet weak var courseLabel: UILabel!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        self.navigationController!.navigationBarHidden = false
+        self.title = "Lessons"
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+        let signoutButon = UIBarButtonItem(title: "Sign Out", style: .Plain, target: self, action: #selector(self.signoutButtonTapped))
+        self.navigationItem.rightBarButtonItem = signoutButon
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(VideoViewController.videoFinished), name: AVPlayerItemDidPlayToEndTimeNotification, object: nil)
+        
+        self.updateCourseLabel()
+        
+
+        do {
+            let buttonClickSoundUrl:NSURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("button click", ofType: "mp3")!)
+            self.buttonClickSoundPlayer = try AVAudioPlayer(contentsOfURL: buttonClickSoundUrl)
         }
+        catch {
+            //If some error occurs execution comes into here
+        }
+        let button = UIButton(type: UIButtonType.RoundedRect)
+        button.frame = CGRectMake(20, 50, 100, 30)
+        button.setTitle("Crash", forState: UIControlState.Normal)
+        button.addTarget(self, action: #selector(VideoViewController.crashButtonTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        //view.addSubview(button)
+    }
+    
+
+    
     func signoutButtonTapped() {
         
         PFUser.logOut()
