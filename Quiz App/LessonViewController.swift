@@ -22,7 +22,7 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var selectedLesson : Lesson?
         var buttonClickSoundPlayer:AVAudioPlayer!
         var alertText : String = ""
-        var completeText : String = "You have completed the course!  A certificate has been emailed to you."
+        var completeText : String = "You have completed the course!  A certificate will be emailed to you."
         @IBOutlet weak var courseLabel: UILabel!
     
         override func viewDidLoad() {

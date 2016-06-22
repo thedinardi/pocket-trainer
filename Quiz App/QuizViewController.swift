@@ -208,7 +208,6 @@ class ViewController: UIViewController {
             
             //Add constaints depending on what number button it is
             
-            //iPad height
             
             let constantHeight = self.view.frame.height / 8
             let spacing = constantHeight / 50
@@ -264,10 +263,10 @@ class ViewController: UIViewController {
         
         //Adjust the height of the content view so that it can scroll if need be
         
-        let contentViewHeight:NSLayoutConstraint = NSLayoutConstraint(item: self.scrollViewContentView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: self.answerButtonArray[0], attribute: NSLayoutAttribute.Height, multiplier: CGFloat(self.answerButtonArray.count - 1), constant: 101)
-        
-        //Add constraint to content view
-        self.scrollViewContentView.addConstraint(contentViewHeight)
+//        let contentViewHeight:NSLayoutConstraint = NSLayoutConstraint(item: self.scrollViewContentView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: self.answerButtonArray[0], attribute: NSLayoutAttribute.Height, multiplier: CGFloat(self.answerButtonArray.count - 1), constant: 101)
+//        
+//        //Add constraint to content view
+//        self.scrollViewContentView.addConstraint(contentViewHeight)
     }
     
     func answerTapped(gesture:UITapGestureRecognizer) {
