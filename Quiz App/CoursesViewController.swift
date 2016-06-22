@@ -43,6 +43,10 @@ class CoursesViewController: UIViewController, UITableViewDataSource, UITableVie
             self.performSegueWithIdentifier("login", sender: self)
         }
 
+        for course in CourseManager.sharedInstance.courses {
+            course.saveInParse()
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

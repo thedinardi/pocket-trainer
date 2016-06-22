@@ -30,7 +30,16 @@ class Question: NSObject {
     
     }
     
-    
+    func createParseObject() -> PFQuestion {
+        let question = PFQuestion()
+        question.questionText = questionText
+        question.answers = answers
+        question.correctAnswerIndex = correctAnswerIndex
+        question.feedback = feedback
+        question.sort = index
+        
+        return question
+    }
     
     
 }

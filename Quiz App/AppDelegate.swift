@@ -32,6 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.server = "http://parseserver-836sq-env.us-east-1.elasticbeanstalk.com/parse"
         }
         
+        PFCourse.registerSubclass()
+        PFLesson.registerSubclass()
+        PFQuestion.registerSubclass()
         Parse.initializeWithConfiguration(configuration)
         
         return true

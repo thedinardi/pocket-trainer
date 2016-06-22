@@ -146,7 +146,7 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func alertCompletion () {
 
             //Quiz Alert
-            let alert:UIAlertController = UIAlertController(title: title, message: completeText, preferredStyle: UIAlertControllerStyle.Alert)
+            let alert:UIAlertController = UIAlertController(title: title, message: "", preferredStyle: UIAlertControllerStyle.Alert)
         
             //Alert yes button & actions
             alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in

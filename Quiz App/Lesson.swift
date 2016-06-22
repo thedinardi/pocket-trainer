@@ -17,7 +17,7 @@ class Lesson: NSObject {
  
     
     var isFinal : Bool = false
-    var isLastQuestion : Bool = false
+    //var isLastQuestion : Bool = false
     
     
     init(jsonDictionary: NSDictionary) {
@@ -51,6 +51,17 @@ class Lesson: NSObject {
             }
             
         }
+    }
+    
+    func createParseObject() -> PFLesson {
+        let lesson = PFLesson()
+        lesson.sort = id
+        lesson.name = name
+        if let movieURL = lesson.movieURL {
+            lesson.movieURL = movieURL
+        }
+        
+        return lesson
     }
     
 }
