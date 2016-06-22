@@ -91,6 +91,7 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
         }
+    
         // Stop the movie player first
         func videoFinished (){
             print("Video Finished")
@@ -114,11 +115,7 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let movieURL = self.selectedLesson!.movieURL
         
         if self.selectedLesson!.isFinal == false {
-            self.avPlayerViewController = AVPlayerViewController()
-            self.avPlayerViewController.player = AVPlayer(URL: movieURL!)
-            self.presentViewController(avPlayerViewController, animated: true) { () -> Void in
-                self.avPlayerViewController.player!.play()
-            }
+            self.playVideoWithURL(movieURL!)
             
         } else {
             
@@ -140,16 +137,22 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 
             }
             else {
+                self.playVideoWithURL(movieURL!)
                 
-                self.avPlayerViewController = AVPlayerViewController()
-                self.avPlayerViewController.player = AVPlayer(URL: movieURL!)
-                self.presentViewController(avPlayerViewController, animated: true) { () -> Void in
-                    self.avPlayerViewController.player!.play()
-                }
                 //self.performSegueWithIdentifier("showQuiz", sender: nil)
             }
 
         }
+    }
+    
+        func playVideoWithURL(movieURL: NSURL) {
+            self.avPlayerViewController = AVPlayerViewController()
+            self.avPlayerViewController.player = AVPlayer(URL: movieURL)
+            self.presentViewController(avPlayerViewController, animated: true) { () -> Void in
+                self.avPlayerViewController.player!.play()
+            }
+        }
+        
         
     func alertCompletion () {
 
@@ -166,7 +169,6 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
      
-    }
 
     // MARK: - Navigation
 

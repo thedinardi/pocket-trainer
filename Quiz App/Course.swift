@@ -36,6 +36,7 @@ class Course: PFObject, PFSubclassing {
                 block(lessons: nil, error: error)
             } else {
                 self.lessons = objects! as! [Lesson]
+                self.lessons.last!.isFinal = true
                 block(lessons: self.lessons, error: error)
             }
             
