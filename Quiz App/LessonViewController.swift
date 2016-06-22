@@ -15,8 +15,8 @@ import Parse
 
 class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var course : Course!
-    var lesson : Lesson!
+    //For this VC only, assume that the course does notyet have its lessons. VC's after this point will have it.
+    var lessons : [Lesson] = []
     @IBOutlet weak var tableView: UITableView!
     var avPlayerViewController:AVPlayerViewController!
     var selectedLesson : Lesson?
@@ -51,6 +51,14 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
         button.setTitle("Crash", forState: UIControlState.Normal)
         button.addTarget(self, action: #selector(VideoViewController.crashButtonTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         //view.addSubview(button)
+        
+        let course = CourseManager.sharedInstance.currentCourse
+        course.getLessons { (lessons, error) in
+            if lessons != nil {
+                self.lessons = lessons!
+                self.tableView.reloadData()
+            }
+        }
     }
     
 
@@ -72,7 +80,7 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.tableView.reloadData()
+        
         self.navigationController!.navigationBarHidden = false
     }
         deinit {
@@ -102,7 +110,7 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         self.buttonClickSoundPlayer.play()
         
-        self.selectedLesson = CourseManager.sharedInstance.currentCourse.lessons[row]
+        self.selectedLesson = self.lessons[row]
         let movieURL = self.selectedLesson!.movieURL
         
         if self.selectedLesson!.isFinal == false {
@@ -177,12 +185,12 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CourseManager.sharedInstance.currentCourse.lessons.count
+        return self.lessons.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("LessonCell") as! LessonTableViewCell
-        let lesson = CourseManager.sharedInstance.currentCourse.lessons[indexPath.row]
+        let lesson = self.lessons[indexPath.row]
         cell.lesson = lesson
         cell.backgroundColor = UIColor.clearColor()
         return cell
