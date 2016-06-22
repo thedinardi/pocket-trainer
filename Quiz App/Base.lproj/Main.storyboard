@@ -163,8 +163,7 @@
                                         <variation key="heightClass=compact" misplaced="YES">
                                             <rect key="frame" x="270" y="248" width="120" height="36"/>
                                         </variation>
-                                        <variation key="heightClass=regular" misplaced="YES">
-                                            <rect key="frame" x="202" y="197" width="173" height="31"/>
+                                        <variation key="heightClass=regular">
                                             <mask key="constraints">
                                                 <include reference="Ko3-Av-CXq"/>
                                             </mask>
@@ -187,8 +186,7 @@
                                         <variation key="heightClass=compact" misplaced="YES">
                                             <rect key="frame" x="270" y="363" width="120" height="36"/>
                                         </variation>
-                                        <variation key="heightClass=regular" misplaced="YES">
-                                            <rect key="frame" x="202" y="266" width="143" height="27"/>
+                                        <variation key="heightClass=regular">
                                             <mask key="constraints">
                                                 <include reference="odn-vU-6P2"/>
                                             </mask>
