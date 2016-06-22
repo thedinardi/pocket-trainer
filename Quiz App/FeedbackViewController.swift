@@ -45,7 +45,7 @@ class FeedbackViewController: UIViewController {
         }
 
         //Get the questions from the question model
-        self.questions = lesson.questions!
+        self.questions = lesson.questions
         
         //Check if there's at least 1 question
         if self.questions.count > 0 {

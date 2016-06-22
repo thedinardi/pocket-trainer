@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1E841DF11BFE2727008BA39F /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E841DF01BFE2727008BA39F /* LessonViewController.swift */; };
-		21026E6A1C0E2458008C0F42 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21026E691C0E2458008C0F42 /* Course.swift */; };
-		21026E6C1C0E2472008C0F42 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21026E6B1C0E2472008C0F42 /* Lesson.swift */; };
 		21026E731C0E2D94008C0F42 /* CourseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21026E721C0E2D94008C0F42 /* CourseManager.swift */; };
 		2113CC821C46D93D00636C41 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2113CC811C46D93D00636C41 /* CoursesViewController.swift */; };
 		2113CC841C46DD6300636C41 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2113CC831C46DD6300636C41 /* Helpers.swift */; };
@@ -19,7 +17,6 @@
 		30F298FDA1FCBD37AE22C3BE /* Pods_Pocket_Trainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A479DE8C5283854166BE149 /* Pods_Pocket_Trainer.framework */; };
 		E60FBEB11CEB8783006F8CE9 /* PT App.json in Resources */ = {isa = PBXBuildFile; fileRef = E60FBEB01CEB8783006F8CE9 /* PT App.json */; };
 		E61070061C246B4D006003C4 /* MyriadPro-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E61070051C246B4D006003C4 /* MyriadPro-Semibold.otf */; };
-		E64433211BF119850004529D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64433201BF119850004529D /* Question.swift */; };
 		E64433251BF272870004529D /* AnswerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64433241BF272870004529D /* AnswerButtonView.swift */; };
 		E64D85571C123DDD005C6408 /* LessonButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64D85561C123DDD005C6408 /* LessonButtonView.swift */; };
 		E6566F451BFCF4DB00913C18 /* Correct answer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E6566F421BFCF4DB00913C18 /* Correct answer.mp3 */; };
@@ -29,7 +26,7 @@
 		E6566F4B1BFCFA6700913C18 /* Aww.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E6566F4A1BFCFA6700913C18 /* Aww.mp3 */; };
 		E6566F4D1BFCFBFF00913C18 /* button click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E6566F4C1BFCFBFF00913C18 /* button click.mp3 */; };
 		E66424BA1BFA831300EB2572 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66424B91BFA831300EB2572 /* FeedbackViewController.swift */; };
-		E69AF9971D1AEFD500179654 /* PFCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69AF9961D1AEFD500179654 /* PFCourse.swift */; };
+		E69AF9971D1AEFD500179654 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69AF9961D1AEFD500179654 /* Course.swift */; };
 		E6AB8EF61BF0FC3C00DB5FE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AB8EF51BF0FC3C00DB5FE9 /* AppDelegate.swift */; };
 		E6AB8EF81BF0FC3C00DB5FE9 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AB8EF71BF0FC3C00DB5FE9 /* QuizViewController.swift */; };
 		E6AB8EFB1BF0FC3C00DB5FE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6AB8EF91BF0FC3C00DB5FE9 /* Main.storyboard */; };
@@ -37,14 +34,12 @@
 		E6AB8F001BF0FC3D00DB5FE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6AB8EFE1BF0FC3D00DB5FE9 /* LaunchScreen.storyboard */; };
 		E6B41CD21C515A3C00551137 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6B41CD11C515A3C00551137 /* iPad.storyboard */; };
 		E6BEDE571D007F9B008FAA48 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BEDE561D007F9B008FAA48 /* RegisterViewController.swift */; };
-		E6D0423C1D1AF25300A09D27 /* PFLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D0423B1D1AF25300A09D27 /* PFLesson.swift */; };
-		E6D0423E1D1AF6D900A09D27 /* PFQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D0423D1D1AF6D900A09D27 /* PFQuestion.swift */; };
+		E6D0423C1D1AF25300A09D27 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D0423B1D1AF25300A09D27 /* Lesson.swift */; };
+		E6D0423E1D1AF6D900A09D27 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D0423D1D1AF6D900A09D27 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1E841DF01BFE2727008BA39F /* LessonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonViewController.swift; sourceTree = "<group>"; };
-		21026E691C0E2458008C0F42 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
-		21026E6B1C0E2472008C0F42 /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		21026E721C0E2D94008C0F42 /* CourseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseManager.swift; sourceTree = "<group>"; };
 		2113CC811C46D93D00636C41 /* CoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		2113CC831C46DD6300636C41 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
@@ -56,7 +51,6 @@
 		5B0A6BB1638C0BA3F955156F /* Pods-Quiz App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quiz App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quiz App/Pods-Quiz App.release.xcconfig"; sourceTree = "<group>"; };
 		E60FBEB01CEB8783006F8CE9 /* PT App.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "PT App.json"; sourceTree = "<group>"; };
 		E61070051C246B4D006003C4 /* MyriadPro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Semibold.otf"; sourceTree = "<group>"; };
-		E64433201BF119850004529D /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		E64433241BF272870004529D /* AnswerButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerButtonView.swift; sourceTree = "<group>"; };
 		E64D85561C123DDD005C6408 /* LessonButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonButtonView.swift; sourceTree = "<group>"; };
 		E6566F421BFCF4DB00913C18 /* Correct answer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Correct answer.mp3"; path = "resources/Correct answer.mp3"; sourceTree = "<group>"; };
@@ -66,7 +60,7 @@
 		E6566F4A1BFCFA6700913C18 /* Aww.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Aww.mp3; path = resources/Aww.mp3; sourceTree = "<group>"; };
 		E6566F4C1BFCFBFF00913C18 /* button click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "button click.mp3"; path = "resources/button click.mp3"; sourceTree = "<group>"; };
 		E66424B91BFA831300EB2572 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
-		E69AF9961D1AEFD500179654 /* PFCourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFCourse.swift; sourceTree = "<group>"; };
+		E69AF9961D1AEFD500179654 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		E6AB8EF21BF0FC3C00DB5FE9 /* Pocket Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6AB8EF51BF0FC3C00DB5FE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6AB8EF71BF0FC3C00DB5FE9 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
@@ -76,8 +70,8 @@
 		E6AB8F011BF0FC3D00DB5FE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6B41CD11C515A3C00551137 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		E6BEDE561D007F9B008FAA48 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = ../RegisterViewController.swift; sourceTree = "<group>"; };
-		E6D0423B1D1AF25300A09D27 /* PFLesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFLesson.swift; sourceTree = "<group>"; };
-		E6D0423D1D1AF6D900A09D27 /* PFQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFQuestion.swift; sourceTree = "<group>"; };
+		E6D0423B1D1AF25300A09D27 /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		E6D0423D1D1AF6D900A09D27 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		F0F420139E24D8153672BE1B /* Pods-Pocket Trainer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Trainer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket Trainer/Pods-Pocket Trainer.debug.xcconfig"; sourceTree = "<group>"; };
 		FFF397B951BBDE2B54CD1895 /* Pods-Pocket Trainer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Trainer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket Trainer/Pods-Pocket Trainer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,12 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				21026E721C0E2D94008C0F42 /* CourseManager.swift */,
-				21026E691C0E2458008C0F42 /* Course.swift */,
-				E69AF9961D1AEFD500179654 /* PFCourse.swift */,
-				21026E6B1C0E2472008C0F42 /* Lesson.swift */,
-				E6D0423B1D1AF25300A09D27 /* PFLesson.swift */,
-				E64433201BF119850004529D /* Question.swift */,
-				E6D0423D1D1AF6D900A09D27 /* PFQuestion.swift */,
+				E69AF9961D1AEFD500179654 /* Course.swift */,
+				E6D0423B1D1AF25300A09D27 /* Lesson.swift */,
+				E6D0423D1D1AF6D900A09D27 /* Question.swift */,
 				215281371C11F9210046C5CF /* User.swift */,
 				2113CC831C46DD6300636C41 /* Helpers.swift */,
 			);
@@ -326,21 +317,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				2173C9931C28603A00679C90 /* LessonTableViewCell.swift in Sources */,
-				E6D0423C1D1AF25300A09D27 /* PFLesson.swift in Sources */,
+				E6D0423C1D1AF25300A09D27 /* Lesson.swift in Sources */,
 				2113CC821C46D93D00636C41 /* CoursesViewController.swift in Sources */,
 				215914B31C17749600642DC1 /* LoginViewController.swift in Sources */,
 				E64D85571C123DDD005C6408 /* LessonButtonView.swift in Sources */,
-				E69AF9971D1AEFD500179654 /* PFCourse.swift in Sources */,
-				21026E6C1C0E2472008C0F42 /* Lesson.swift in Sources */,
-				21026E6A1C0E2458008C0F42 /* Course.swift in Sources */,
+				E69AF9971D1AEFD500179654 /* Course.swift in Sources */,
 				21026E731C0E2D94008C0F42 /* CourseManager.swift in Sources */,
 				E64433251BF272870004529D /* AnswerButtonView.swift in Sources */,
 				1E841DF11BFE2727008BA39F /* LessonViewController.swift in Sources */,
 				E6AB8EF81BF0FC3C00DB5FE9 /* QuizViewController.swift in Sources */,
 				E66424BA1BFA831300EB2572 /* FeedbackViewController.swift in Sources */,
 				E6BEDE571D007F9B008FAA48 /* RegisterViewController.swift in Sources */,
-				E6D0423E1D1AF6D900A09D27 /* PFQuestion.swift in Sources */,
-				E64433211BF119850004529D /* Question.swift in Sources */,
+				E6D0423E1D1AF6D900A09D27 /* Question.swift in Sources */,
 				215281381C11F9210046C5CF /* User.swift in Sources */,
 				2113CC841C46DD6300636C41 /* Helpers.swift in Sources */,
 				E6AB8EF61BF0FC3C00DB5FE9 /* AppDelegate.swift in Sources */,

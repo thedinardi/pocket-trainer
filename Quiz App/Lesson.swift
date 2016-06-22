@@ -1,67 +1,44 @@
 //
-//  Lesson.swift
-//  Quiz App
+//  PFLesson.swift
+//  Pocket Trainer
 //
-//  Created by Edit Station 3 on 12/1/15.
-//  Copyright © 2015 Ric Murray Studio. All rights reserved.
+//  Created by AE Tower on 6/22/16.
+//  Copyright © 2016 Ric Murray Studio. All rights reserved.
 //
 
 import UIKit
+import Parse
 
-class Lesson: NSObject {
-    var id : Int
-    var name : String
-    var movieURL : NSURL?
-    var questions : [Question]?
-    var image : NSURL?
- 
+class Lesson: PFObject, PFSubclassing {
+    @NSManaged var sort : Int
+    @NSManaged var name : String
+    @NSManaged private var movieURLString : String
+    @NSManaged var course : Course
+    @NSManaged var hasQuiz : Bool
     
-    var isFinal : Bool = false
-    //var isLastQuestion : Bool = false
+    var questions : [Question] = []
     
+    //TODO: remove this
+    var id = 0
     
-    init(jsonDictionary: NSDictionary) {
-        self.id = jsonDictionary["id"] as! Int
-        self.name = jsonDictionary["name"] as! String
-
-       
-        if let urlString = jsonDictionary["movieURL"] {
-            self.movieURL = NSURL(string: (urlString as! String))
-        }
-        
-        if let imgString = jsonDictionary["image"] {
-            self.image = NSURL(string: (imgString as! String))
-        }
-        
-        
-        //Check this
-        if let lessonName = jsonDictionary["name"] {
-            self.name = lessonName as! String
-        }
-        
-        
-        if let dict = jsonDictionary["quiz"] {
-            let questionsDicts = dict as! [NSDictionary]
-            self.questions = []
-
-            for (i, questionDict) in questionsDicts.enumerate() {
-                let q = Question(jsonDictionary: questionDict)
-                q.index = i
-                self.questions!.append(q)
+    var movieURL : NSURL? {
+        get {
+            if movieURLString != "" {
+                return NSURL(string: movieURLString)
+            } else {
+                return nil
             }
-            
-        }
-    }
-    
-    func createParseObject() -> PFLesson {
-        let lesson = PFLesson()
-        lesson.sort = id
-        lesson.name = name
-        if let movieURL = lesson.movieURL {
-            lesson.movieURL = movieURL
         }
         
-        return lesson
+        set(newURL) {
+            self.movieURLString = newURL!.absoluteString
+        }
     }
+
+    var isFinal : Bool = false
     
+    class func parseClassName() -> String {
+        return "Lesson"
+    }
+
 }

@@ -11,36 +11,29 @@ import UIKit
 private let sharedCourseManager = CourseManager()
 
 class CourseManager: NSObject {
-    private var selectedCourseIndex = 0
+    private var selectedCourse : Course?
     
     class var sharedInstance : CourseManager {
         return sharedCourseManager
     }
     
-    var courses : [Course] {
-             // Get an NSURL object pointing to the json file in our app bundle
-            let jsonPath:String = NSBundle.mainBundle().pathForResource("PT App", ofType: "json")!
-            let urlPath:NSURL = NSURL(fileURLWithPath: jsonPath)
-            let jsonData:NSData = NSData(contentsOfURL: urlPath)!
-
-            do {
-                let arrayOfDictionaries: [NSDictionary] = try NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers) as! [NSDictionary]
-                return arrayOfDictionaries.map({Course(jsonDictionary: $0)})
-            }
-            catch {
-                // There was an error parsing the json file
-                print("Error Loading JSON File")
-                return []
-            }
+    typealias CoursesBlock = (courses: [Course]?, error: NSError?) -> ()
+    
+    func getCourses(block : CoursesBlock) {
+        let query = Course.query()!
+        query.findObjectsInBackgroundWithBlock({ (objects, error) in
+            let courses = objects as! [Course]?
+            block(courses: courses, error: error)
+        })
     }
     
-    var currentCourse : Course {
+    var currentCourse : Course! {
         get {
-            return courses[selectedCourseIndex]
+            return selectedCourse
         }
         
         set(newCourse) {
-            self.selectedCourseIndex = self.courses.indexOf(newCourse)!
+            self.selectedCourse = newCourse
         }
     }
 }

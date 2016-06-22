@@ -88,7 +88,7 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
             print("Video Finished")
             User.currentUser.completedVideo(self.selectedLesson!)
             
-            if self.selectedLesson!.questions != nil {
+            if self.selectedLesson!.hasQuiz {
                 self.performSegueWithIdentifier("showQuiz", sender: nil)
                 self.dismissViewControllerAnimated(true, completion: nil)
             }

@@ -153,7 +153,7 @@ class ViewController: UIViewController {
         self.resultView.alpha = 0
         
         //Get the questions from the quiz model
-        self.questions = lesson.questions!
+        self.questions = lesson.questions
         
         //Check if there's at least 1 question
         if self.questions.count > 0 {

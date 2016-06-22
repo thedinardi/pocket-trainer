@@ -48,14 +48,14 @@ class LessonTableViewCell: UITableViewCell {
     
     func updateViewForCourse() {
         self.nameLabel.text = self.course.name
-        if User.currentUser.hasPassedFinalForCourse(course){
-            self.checkmarkImageView.hidden = false
-            
-        }
-        else {
-            self.checkmarkImageView.hidden = true
-        }
-            
+//        if User.currentUser.hasPassedFinalForCourse(course){
+//            self.checkmarkImageView.hidden = false
+//            
+//        }
+//        else {
+//            self.checkmarkImageView.hidden = true
+//        }
+        
     }
 }
             

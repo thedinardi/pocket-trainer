@@ -15,6 +15,8 @@ class CoursesViewController: UIViewController, UITableViewDataSource, UITableVie
 
     @IBOutlet weak var tableView: UITableView!
     var buttonClickSoundPlayer:AVAudioPlayer!
+    
+    var courses : [Course] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +30,22 @@ class CoursesViewController: UIViewController, UITableViewDataSource, UITableVie
         catch {
             //If some error occurs execution comes into here
         }
+        
+        CourseManager.sharedInstance.getCourses { (courses, error) in
+            if courses != nil {
+                self.courses = courses!
+                self.tableView.reloadData()
+            } else {
+                //TODO: Display an alert to the user to check their internet connection
+            }
+        }
+        
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController!.navigationBarHidden = true
-        self.tableView.reloadData()
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -41,10 +53,6 @@ class CoursesViewController: UIViewController, UITableViewDataSource, UITableVie
 
         if PFUser.currentUser() == nil {
             self.performSegueWithIdentifier("login", sender: self)
-        }
-
-        for course in CourseManager.sharedInstance.courses {
-            course.saveInParse()
         }
         
     }
@@ -55,12 +63,12 @@ class CoursesViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CourseManager.sharedInstance.courses.count
+        return self.courses.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CourseCell") as! LessonTableViewCell
-        cell.course = CourseManager.sharedInstance.courses[indexPath.row]
+        cell.course = self.courses[indexPath.row]
         cell.backgroundColor = UIColor.clearColor()
         return cell
     }
@@ -76,7 +84,7 @@ class CoursesViewController: UIViewController, UITableViewDataSource, UITableVie
         // Pass the selected object to the new view controller.
         if segue.identifier == "lessons" {
             let indexPath = self.tableView.indexPathForSelectedRow!
-            let course = CourseManager.sharedInstance.courses[indexPath.row]
+            let course = self.courses[indexPath.row]
             CourseManager.sharedInstance.currentCourse = course
             self.buttonClickSoundPlayer.play()
         }

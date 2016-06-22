@@ -1,45 +1,25 @@
 //
-//  Question.swift
-//  Quiz App
+//  PFQuestion.swift
+//  Pocket Trainer
 //
-//  Created by AE Tower on 11/9/15.
-//  Copyright © 2015 Ric Murray Studio. All rights reserved.
+//  Created by AE Tower on 6/22/16.
+//  Copyright © 2016 Ric Murray Studio. All rights reserved.
 //
 
 import UIKit
+import Parse
 
-class Question: NSObject {
+class Question: PFObject, PFSubclassing {
     
-    var questionText: String
-    var answers:[String]
-    var correctAnswerIndex:Int
-    var feedback:String
-    var index : Int = 0
-    var name : String {
-        return "Question \(index + 1)"
+    @NSManaged var questionText: String
+    @NSManaged var answers:[String]
+    @NSManaged var correctAnswerIndex:Int
+    @NSManaged var feedback:String
+    @NSManaged var sort : Int
+    @NSManaged var lesson : Lesson
+    
+    class func parseClassName() -> String {
+        return "Question"
     }
-    
-  
 
-    init(jsonDictionary: NSDictionary) {
-        self.questionText = jsonDictionary["question"] as! String
-        self.answers = jsonDictionary["answers"] as! [String]
-        self.correctAnswerIndex = jsonDictionary["correctIndex"] as! Int
-        self.feedback = jsonDictionary["feedback"] as! String
-        
-    
-    }
-    
-    func createParseObject() -> PFQuestion {
-        let question = PFQuestion()
-        question.questionText = questionText
-        question.answers = answers
-        question.correctAnswerIndex = correctAnswerIndex
-        question.feedback = feedback
-        question.sort = index
-        
-        return question
-    }
-    
-    
 }

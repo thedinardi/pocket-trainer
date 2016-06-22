@@ -75,7 +75,7 @@ class User: NSObject {
             }
         }
         
-        if lesson.questions != nil {
+        if lesson.hasQuiz {
             if !self.hasPassedQuiz(lesson) {
                 return false
             }
