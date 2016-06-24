@@ -13,7 +13,7 @@ class LessonTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var checkmarkImageView: UIImageView!
     @IBOutlet weak var bgimage: UIImageView!
-    var lessonsComplete:Int = 0
+    //var lessonsComplete:Int = 0
     var lesson : Lesson! {
         didSet {
             self.updateViewForLesson()
@@ -36,9 +36,9 @@ class LessonTableViewCell: UITableViewCell {
     
     func updateViewForLesson() {
         self.nameLabel.text = self.lesson.name
-        if User.currentUser.hasFullyCompletedLesson(lesson) {
+        if User.currentUser()!.hasFullyCompletedLesson(lesson) {
             self.checkmarkImageView.hidden = false
-            self.lessonsComplete += 1
+            //self.lessonsComplete += 1
         }
         else {
             self.checkmarkImageView.hidden = true
@@ -48,7 +48,7 @@ class LessonTableViewCell: UITableViewCell {
     
     func updateViewForCourse() {
         self.nameLabel.text = self.course.name
-//        if User.currentUser.hasPassedFinalForCourse(course){
+//        if User.currentUser()!.hasPassedFinalForCourse(course){
 //            self.checkmarkImageView.hidden = false
 //            
 //        }

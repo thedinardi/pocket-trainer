@@ -32,9 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.server = "http://parseserver-836sq-env.us-east-1.elasticbeanstalk.com/parse"
         }
         
+        User.registerSubclass()
         Course.registerSubclass()
         Lesson.registerSubclass()
         Question.registerSubclass()
+        WatchedVideo.registerSubclass()
+        QuizResult.registerSubclass()
         Parse.initializeWithConfiguration(configuration)
         
         return true

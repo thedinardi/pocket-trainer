@@ -7,42 +7,60 @@
 //
 
 import UIKit
+import Parse
 
 let passPercent : Float = 0.6
 
-private let currentU = User()
 
-class User: NSObject {
+
+class User: PFUser {
     
-    class var currentUser : User {
-        return currentU
-    }
+    @NSManaged var name : String
     
-    override init() {
-        super.init()
-        self.loadData()
-    }
+    private var videosWatched : [String] = []
+    private var quizResults : [String : Float] = [:]
     
-    private var videosWatched : [Int] = []
-    private var quizResults : [Int : Float] = [:]
+    var hasLoadedData = false
     
     func completedVideo(lesson : Lesson) {
-        self.videosWatched.append(lesson.id)
-        self.saveData()
+        if !self.hasWatchedVideo(lesson) {
+            self.videosWatched.append(lesson.objectId!)
+            let wv = WatchedVideo()
+            wv.user = User.currentUser()!
+            wv.lesson = lesson
+            wv.saveEventually()
+        }
     }
     
     func hasWatchedVideo(lesson : Lesson) -> Bool {
-        return self.videosWatched.contains(lesson.id)
+        return self.videosWatched.contains(lesson.objectId!)
     }
     
     func completedQuiz(lesson : Lesson, percent: Float) {
+        let oldResults = self.quizResultsForLesson(lesson)
         
-        self.quizResults[lesson.id] = percent
-        self.saveData()
+        if oldResults == nil {
+            self.quizResults[lesson.objectId!] = percent
+            let qr = QuizResult()
+            qr.user = User.currentUser()!
+            qr.lesson = lesson
+            qr.score = percent
+            qr.saveEventually()
+        } else if percent > oldResults {
+            //find the old object and update it
+            QuizResult.getQuizResultsForLesson(lesson, block: { (quizResult, error) in
+                if quizResult != nil {
+                    quizResult!.score = percent
+                    quizResult!.saveEventually()
+                }
+            })
+            
+        }
+       
     }
     
     func quizResultsForLesson(lesson: Lesson) -> Float? {
-        return quizResults[lesson.id]
+        return quizResults[lesson.objectId!]
     }
     
     func hasPassedQuiz(lesson: Lesson) -> Bool {
@@ -84,31 +102,37 @@ class User: NSObject {
         return true
     }
     
-    
-    func loadData() {
-        let path = docURL.URLByAppendingPathComponent("userData.dat")
-        let data = NSData(contentsOfURL: path)
-        if (data != nil) {
-            let unarchiver = NSKeyedUnarchiver(forReadingWithData: data!)
-            self.videosWatched = unarchiver.decodeObjectForKey("videosWatched") as! [Int]
-            self.quizResults = unarchiver.decodeObjectForKey("quizResults") as! [Int : Float]
-            unarchiver.finishDecoding()
-            print("Finished Loading Data")
-        } else {
-            print("No Data Found")
+    func getWatchedVideosAndQuizResults() {
+        var query = WatchedVideo.query()!
+        query.whereKey("user", equalTo: self)
+        query.limit = 1000
+        query.findObjectsInBackgroundWithBlock { (objects, error) in
+            let wVids = objects as! [WatchedVideo]?
+            
+            if wVids != nil && wVids!.count > 0 {
+                for video in wVids! {
+                    self.videosWatched.append(video.lesson.objectId!)
+                }
+            }
+            
+            //got the videos, now get the quiz data
+            query = QuizResult.query()!
+            query.whereKey("user", equalTo: self)
+            query.limit = 1000
+            query.findObjectsInBackgroundWithBlock({ (objects, error) in
+                let qResults = objects as! [QuizResult]?
+                
+                if qResults != nil && qResults!.count > 0 {
+                    for result in qResults! {
+                        self.quizResults[result.lesson.objectId!] = result.score
+                    }
+                }
+                
+                self.hasLoadedData = true
+                
+            })
         }
     }
     
-    func saveData() {
-        if self.videosWatched.count > 0 {
-            let path = docURL.URLByAppendingPathComponent("userData.dat")
-            let data = NSMutableData()
-            let archiver = NSKeyedArchiver(forWritingWithMutableData: data)
-            archiver.encodeObject(videosWatched, forKey: "videosWatched")
-            archiver.encodeObject(quizResults, forKey: "quizResults")
-            archiver.finishEncoding()
-            data.writeToURL(path, atomically: true)
-            print("Finished Saving Data")
-        }
-    }
+
 }

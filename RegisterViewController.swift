@@ -85,11 +85,12 @@ class RegisterViewController: UIViewController {
         }
         
         //Store data
-        let user = PFUser()
+        let user = User()
         user.email = userEmail
         user.username = userEmail
         user.password = userPassword
-        //TODO: add name with subclasses
+        user.name = userName!
+        
         user.signUpInBackgroundWithBlock { (success, error) in
             if success {
                 //Display alert message with confirmation

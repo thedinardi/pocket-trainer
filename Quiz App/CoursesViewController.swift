@@ -62,8 +62,11 @@ class CoursesViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
-        if PFUser.currentUser() == nil {
+        if User.currentUser() == nil {
             self.performSegueWithIdentifier("login", sender: self)
+        } else {
+            //TODO: handle edge case of data not loading in time
+            User.currentUser()!.getWatchedVideosAndQuizResults()
         }
         
     }

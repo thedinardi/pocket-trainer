@@ -80,7 +80,7 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+        self.tableView.reloadData()
         self.navigationController!.navigationBarHidden = false
     }
         deinit {
@@ -95,7 +95,7 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Stop the movie player first
         func videoFinished (){
             print("Video Finished")
-            User.currentUser.completedVideo(self.selectedLesson!)
+            User.currentUser()!.completedVideo(self.selectedLesson!)
             
             if self.selectedLesson!.hasQuiz {
                 self.performSegueWithIdentifier("showQuiz", sender: nil)
@@ -119,7 +119,7 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
         } else {
             
-            if !User.currentUser.canTakeFinalForCourse(CourseManager.sharedInstance.currentCourse) {
+            if !User.currentUser()!.canTakeFinalForCourse(CourseManager.sharedInstance.currentCourse) {
                 
                 //show prompt to user explaining they need to complete other quizzes
         

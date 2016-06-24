@@ -36,6 +36,8 @@
 		E6BEDE571D007F9B008FAA48 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BEDE561D007F9B008FAA48 /* RegisterViewController.swift */; };
 		E6D0423C1D1AF25300A09D27 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D0423B1D1AF25300A09D27 /* Lesson.swift */; };
 		E6D0423E1D1AF6D900A09D27 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D0423D1D1AF6D900A09D27 /* Question.swift */; };
+		E6D042401D1D872C00A09D27 /* WatchedVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D0423F1D1D872C00A09D27 /* WatchedVideo.swift */; };
+		E6D042421D1D8CA900A09D27 /* QuizResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D042411D1D8CA900A09D27 /* QuizResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		E6BEDE561D007F9B008FAA48 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = ../RegisterViewController.swift; sourceTree = "<group>"; };
 		E6D0423B1D1AF25300A09D27 /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		E6D0423D1D1AF6D900A09D27 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		E6D0423F1D1D872C00A09D27 /* WatchedVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchedVideo.swift; sourceTree = "<group>"; };
+		E6D042411D1D8CA900A09D27 /* QuizResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizResult.swift; sourceTree = "<group>"; };
 		F0F420139E24D8153672BE1B /* Pods-Pocket Trainer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Trainer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket Trainer/Pods-Pocket Trainer.debug.xcconfig"; sourceTree = "<group>"; };
 		FFF397B951BBDE2B54CD1895 /* Pods-Pocket Trainer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Trainer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket Trainer/Pods-Pocket Trainer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +101,8 @@
 				E6D0423B1D1AF25300A09D27 /* Lesson.swift */,
 				E6D0423D1D1AF6D900A09D27 /* Question.swift */,
 				215281371C11F9210046C5CF /* User.swift */,
+				E6D0423F1D1D872C00A09D27 /* WatchedVideo.swift */,
+				E6D042411D1D8CA900A09D27 /* QuizResult.swift */,
 				2113CC831C46DD6300636C41 /* Helpers.swift */,
 			);
 			name = Model;
@@ -321,6 +327,7 @@
 				2113CC821C46D93D00636C41 /* CoursesViewController.swift in Sources */,
 				215914B31C17749600642DC1 /* LoginViewController.swift in Sources */,
 				E64D85571C123DDD005C6408 /* LessonButtonView.swift in Sources */,
+				E6D042421D1D8CA900A09D27 /* QuizResult.swift in Sources */,
 				E69AF9971D1AEFD500179654 /* Course.swift in Sources */,
 				21026E731C0E2D94008C0F42 /* CourseManager.swift in Sources */,
 				E64433251BF272870004529D /* AnswerButtonView.swift in Sources */,
@@ -330,6 +337,7 @@
 				E6BEDE571D007F9B008FAA48 /* RegisterViewController.swift in Sources */,
 				E6D0423E1D1AF6D900A09D27 /* Question.swift in Sources */,
 				215281381C11F9210046C5CF /* User.swift in Sources */,
+				E6D042401D1D872C00A09D27 /* WatchedVideo.swift in Sources */,
 				2113CC841C46DD6300636C41 /* Helpers.swift in Sources */,
 				E6AB8EF61BF0FC3C00DB5FE9 /* AppDelegate.swift in Sources */,
 			);

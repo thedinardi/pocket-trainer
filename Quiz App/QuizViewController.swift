@@ -422,11 +422,11 @@ class ViewController: UIViewController {
 
                 //End the quiz
 
-                self.percentCorrect = Float(numberCorrect) / Float(actualCurrentIndex)
-                User.currentUser.quizResultsForLesson(self.lesson)
-                User.currentUser.completedQuiz(self.lesson, percent: percentCorrect)
+                self.percentCorrect = Float(numberCorrect) / Float(self.questions.count)
+                User.currentUser()!.quizResultsForLesson(self.lesson)
+                User.currentUser()!.completedQuiz(self.lesson, percent: percentCorrect)
 
-                if User.currentUser.hasPassedQuiz(self.lesson) {
+                if User.currentUser()!.hasPassedQuiz(self.lesson) {
                 
                 //if percentCorrect >= passPercent {
 
@@ -444,7 +444,7 @@ class ViewController: UIViewController {
                     self.resultView.alpha = 1
                     
                     //COURSE COMPLETION NOTIFICATION AND EMAIL TO BE SENT
-                    if User.currentUser.hasPassedFinalForCourse(CourseManager.sharedInstance.currentCourse) {
+                    if User.currentUser()!.hasPassedFinalForCourse(CourseManager.sharedInstance.currentCourse) {
                         
                         //Quiz Alert
                         let alert = UIAlertController(title: "Congratulations!", message: "You have completed the course!  A certificate will be emailed to you.", preferredStyle: UIAlertControllerStyle.Alert)
