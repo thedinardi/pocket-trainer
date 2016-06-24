@@ -87,6 +87,12 @@ class CoursesViewController: UIViewController, UITableViewDataSource, UITableVie
         return cell
     }
     
+    @IBAction func signOutTapped(sender: AnyObject) {
+        
+        PFUser.logOut()
+        print("logged out")
+        self.performSegueWithIdentifier("login", sender: self)
+    }
     
 
     

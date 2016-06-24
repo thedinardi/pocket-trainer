@@ -55,8 +55,7 @@ class ViewController: UIViewController {
         self.navigationController!.navigationBarHidden = false
         self.title = "Quiz"
         
-        let signoutButon = UIBarButtonItem(title: "Sign Out", style: .Plain, target: self, action: #selector(self.signoutButtonTapped))
-        self.navigationItem.rightBarButtonItem = signoutButon
+
         
         if self.lesson.isFinal {
             self.title = "Final Exam"
@@ -479,11 +478,7 @@ class ViewController: UIViewController {
         }
     }
 
-    func signoutButtonTapped() {
-        PFUser.logOut()
-        print("logout successful")
-        self.navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
-    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

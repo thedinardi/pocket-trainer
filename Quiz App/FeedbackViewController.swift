@@ -30,8 +30,7 @@ class FeedbackViewController: UIViewController {
         self.title = "Feedback"
         let barItem = UIBarButtonItem(title: "Lessons", style: .Plain, target: self, action: #selector(self.lessonsButtonTapped))
         self.navigationItem.leftBarButtonItem = barItem
-        let signoutButon = UIBarButtonItem(title: "Sign Out", style: .Plain, target: self, action: #selector(self.signoutButtonTapped))
-        self.navigationItem.rightBarButtonItem = signoutButon
+
         
         // Do any additional setup after loading the view, typically from a nib.
     
@@ -103,11 +102,7 @@ class FeedbackViewController: UIViewController {
         //self.showNavigationBar()
     }
     
-    func signoutButtonTapped() {
-        PFUser.logOut()
-        print("logout successful")
-        self.navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
-    }
+
 
     @IBAction func nextButton2(sender: UIButton) {
 

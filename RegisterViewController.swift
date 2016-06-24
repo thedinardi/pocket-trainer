@@ -90,19 +90,25 @@ class RegisterViewController: UIViewController {
         user.username = userEmail
         user.password = userPassword
         user.name = userName!
-        
+        //TODO: add name with subclasses
         user.signUpInBackgroundWithBlock { (success, error) in
             if success {
                 //Display alert message with confirmation
                 let myAlert = UIAlertController(title: "Congratulations", message: "Registration is successful.  Thank You!", preferredStyle: UIAlertControllerStyle.Alert);
                 let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { action in
                     self.dismissViewControllerAnimated(true, completion: nil)
+                   
                 }
                 
                 myAlert.addAction(okAction)
                 self.presentViewController(myAlert, animated: true, completion: nil)
             } else {
                 print("Failed to sign up: \(error?.localizedDescription)")
+                _ = UIAlertController(title: "", message: "An account already exists for this email.", preferredStyle: UIAlertControllerStyle.Alert);
+                _ = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { action in
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }
+                
             }
         }
         
@@ -122,6 +128,7 @@ class RegisterViewController: UIViewController {
     @IBAction func haveloginButtonTapped(sender: AnyObject) {
         
         self.dismissViewControllerAnimated(true, completion: nil)
+        
     }
     
 

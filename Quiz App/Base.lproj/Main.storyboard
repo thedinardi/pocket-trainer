@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -114,7 +115,7 @@
                                             <constraint firstAttribute="width" constant="158" id="VeY-Wj-d9h"/>
                                             <constraint firstAttribute="height" constant="30" id="chI-VZ-tne"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <variation key="heightClass=regular">
                                             <mask key="constraints">
@@ -244,7 +245,7 @@
                                             <constraint firstAttribute="height" constant="30" id="JfG-N4-OnI"/>
                                         </constraints>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="heightClass=regular">
                                             <mask key="constraints">
@@ -902,6 +903,36 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RM App header" translatesAutoresizingMaskIntoConstraints="NO" id="rlB-5O-PdH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7p-C8-91l">
+                                <rect key="frame" x="22" y="421" width="163" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NDJ-DR-QFN">
+                                        <variation key="heightClass=regular" constant="64"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" secondItem="t7p-C8-91l" secondAttribute="height" multiplier="92:29" id="cSu-mF-fku">
+                                        <variation key="heightClass=regular" constant="-4.0344827586206975"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="27"/>
+                                <state key="normal" title="SIGN OUT" backgroundImage="blue button ipad">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="NDJ-DR-QFN"/>
+                                        <exclude reference="cSu-mF-fku"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="NDJ-DR-QFN"/>
+                                        <include reference="cSu-mF-fku"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="signOutTapped:" destination="JbA-vb-Dja" eventType="touchUpInside" id="ZEo-to-agP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -910,6 +941,9 @@
                             <constraint firstItem="S8r-kq-UXx" firstAttribute="leading" secondItem="Lqx-84-GVL" secondAttribute="leading" id="95t-tc-XaF"/>
                             <constraint firstItem="NNA-fR-bF9" firstAttribute="top" secondItem="S8r-kq-UXx" secondAttribute="bottom" id="EhO-Rj-c16"/>
                             <constraint firstItem="rlB-5O-PdH" firstAttribute="height" secondItem="Lqx-84-GVL" secondAttribute="height" multiplier="0.12" id="GV5-xV-7cq"/>
+                            <constraint firstItem="yDx-ec-w6f" firstAttribute="top" secondItem="t7p-C8-91l" secondAttribute="bottom" constant="27" id="Ppw-2D-jRP">
+                                <variation key="heightClass=regular" constant="37"/>
+                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="S8r-kq-UXx" secondAttribute="trailing" id="QyI-I9-IQe"/>
                             <constraint firstItem="a0j-y6-mXp" firstAttribute="height" secondItem="Lqx-84-GVL" secondAttribute="height" id="SHe-Mv-ddr"/>
                             <constraint firstAttribute="trailing" secondItem="rlB-5O-PdH" secondAttribute="trailing" id="YfJ-iZ-rvX"/>
@@ -921,17 +955,25 @@
                             <constraint firstItem="rlB-5O-PdH" firstAttribute="leading" secondItem="Lqx-84-GVL" secondAttribute="leading" id="qul-cR-Zoe"/>
                             <constraint firstItem="NNA-fR-bF9" firstAttribute="leading" secondItem="Lqx-84-GVL" secondAttribute="leading" id="qys-H6-Hjx"/>
                             <constraint firstItem="a0j-y6-mXp" firstAttribute="leading" secondItem="Lqx-84-GVL" secondAttribute="leading" id="tpG-ST-1xS"/>
-                            <constraint firstItem="yDx-ec-w6f" firstAttribute="top" secondItem="NNA-fR-bF9" secondAttribute="bottom" id="w7a-46-JTE"/>
+                            <constraint firstItem="yDx-ec-w6f" firstAttribute="top" secondItem="NNA-fR-bF9" secondAttribute="bottom" id="w7a-46-JTE">
+                                <variation key="heightClass=regular" constant="118"/>
+                            </constraint>
                             <constraint firstItem="NNA-fR-bF9" firstAttribute="top" secondItem="rlB-5O-PdH" secondAttribute="bottom" constant="60" id="wgf-QI-faN"/>
                             <constraint firstItem="a0j-y6-mXp" firstAttribute="width" secondItem="Lqx-84-GVL" secondAttribute="width" id="wj5-0s-98y"/>
+                            <constraint firstItem="t7p-C8-91l" firstAttribute="centerX" secondItem="Lqx-84-GVL" secondAttribute="centerX" id="zHd-Za-Qfl"/>
                             <constraint firstItem="a0j-y6-mXp" firstAttribute="centerX" secondItem="Lqx-84-GVL" secondAttribute="centerX" id="zP3-DE-pyI"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="t7p-C8-91l"/>
+                            </mask>
                             <mask key="constraints">
                                 <exclude reference="SHe-Mv-ddr"/>
                                 <exclude reference="ZPi-uK-mtE"/>
                                 <exclude reference="wj5-0s-98y"/>
                                 <exclude reference="zP3-DE-pyI"/>
+                                <exclude reference="zHd-Za-Qfl"/>
+                                <exclude reference="Ppw-2D-jRP"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -944,6 +986,15 @@
                                 <include reference="ZPi-uK-mtE"/>
                                 <include reference="wj5-0s-98y"/>
                                 <include reference="zP3-DE-pyI"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="t7p-C8-91l"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="zHd-Za-Qfl"/>
+                                <include reference="Ppw-2D-jRP"/>
                             </mask>
                         </variation>
                     </view>
