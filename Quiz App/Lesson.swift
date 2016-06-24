@@ -40,5 +40,28 @@ class Lesson: PFObject, PFSubclassing {
     class func parseClassName() -> String {
         return "Lesson"
     }
+    
+    typealias QuestionsBlock = (questions: [Question]?, error: NSError?) -> ()
+    func getQuestions(block : QuestionsBlock) {
+        
+        if self.questions.count > 0 {
+            return block(questions: self.questions, error: nil)
+        }
+        
+        let query = Question.query()!
+        query.whereKey("lesson", equalTo: self)
+        query.orderByAscending("sort")
+        query.findObjectsInBackgroundWithBlock { (objects, error) in
+            if objects == nil {
+                block(questions: nil, error: error)
+            } else {
+                self.questions = objects! as! [Question]
+                block(questions: self.questions, error: error)
+            }
+            
+        }
+        
+    }
+
 
 }

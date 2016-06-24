@@ -153,18 +153,20 @@ class ViewController: UIViewController {
         self.resultView.alpha = 0
         
         //Get the questions from the quiz model
-        self.questions = lesson.questions
-        
-        //Check if there's at least 1 question
-        if self.questions.count > 0 {
-            
-            //Set the current question to first question
-            self.currentQuestion = self.questions[0]
-            
-            //Call the display question method
-            self.displayCurrentQuestion()
-            
+        self.lesson.getQuestions { (questions, error) in
+            if error == nil && questions != nil && questions!.count > 0 {
+                self.questions = questions!
+                
+                //Set the current question to first question
+                self.currentQuestion = self.questions.first!
+                
+                //Call the display question method
+                self.displayCurrentQuestion()
+            } else {
+                //TODO: notify the user there was an error grabbing questinos
+            }
         }
+
     }
 
     func displayCurrentQuestion() {
