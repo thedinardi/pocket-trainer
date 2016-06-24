@@ -923,14 +923,49 @@
                                     <outlet property="delegate" destination="JbA-vb-Dja" id="AKt-Gx-7VC"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvb-ZY-9cM">
+                                <rect key="frame" x="22" y="421" width="247" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="244" id="EdO-HJ-Lct"/>
+                                    <constraint firstAttribute="height" constant="52" id="fAi-mu-0pd">
+                                        <variation key="heightClass=regular" constant="62"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="37"/>
+                                <state key="normal" title="SIGN OUT" backgroundImage="blue button ipad">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EdO-HJ-Lct"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="EdO-HJ-Lct"/>
+                                        <exclude reference="fAi-mu-0pd"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="32" y="505" width="337" height="65"/>
+                                    <mask key="constraints">
+                                        <exclude reference="fAi-mu-0pd"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="signOutTapped:" destination="JbA-vb-Dja" eventType="touchUpInside" id="4rd-Pd-ie2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Tvb-ZY-9cM" firstAttribute="centerX" secondItem="NNA-fR-bF9" secondAttribute="centerX" id="0mE-Wx-0BV"/>
                             <constraint firstItem="rlB-5O-PdH" firstAttribute="top" secondItem="Lqx-84-GVL" secondAttribute="top" id="2hP-ma-xup"/>
                             <constraint firstAttribute="bottom" secondItem="a0j-y6-mXp" secondAttribute="bottom" id="8xe-Jl-BEt"/>
                             <constraint firstItem="S8r-kq-UXx" firstAttribute="leading" secondItem="Lqx-84-GVL" secondAttribute="leading" id="95t-tc-XaF"/>
                             <constraint firstItem="NNA-fR-bF9" firstAttribute="top" secondItem="S8r-kq-UXx" secondAttribute="bottom" id="EhO-Rj-c16"/>
                             <constraint firstItem="rlB-5O-PdH" firstAttribute="height" secondItem="Lqx-84-GVL" secondAttribute="height" multiplier="0.12" id="GV5-xV-7cq"/>
+                            <constraint firstItem="yDx-ec-w6f" firstAttribute="top" secondItem="Tvb-ZY-9cM" secondAttribute="bottom" constant="35" id="Ntn-2H-nDf"/>
                             <constraint firstAttribute="trailing" secondItem="S8r-kq-UXx" secondAttribute="trailing" id="QyI-I9-IQe"/>
                             <constraint firstItem="a0j-y6-mXp" firstAttribute="height" secondItem="Lqx-84-GVL" secondAttribute="height" id="SHe-Mv-ddr"/>
                             <constraint firstAttribute="trailing" secondItem="rlB-5O-PdH" secondAttribute="trailing" id="YfJ-iZ-rvX"/>
@@ -938,21 +973,30 @@
                             <constraint firstAttribute="trailing" secondItem="a0j-y6-mXp" secondAttribute="trailing" id="bzP-FJ-3ml"/>
                             <constraint firstItem="a0j-y6-mXp" firstAttribute="top" secondItem="Lqx-84-GVL" secondAttribute="top" id="e9B-x8-EPl"/>
                             <constraint firstItem="S8r-kq-UXx" firstAttribute="top" secondItem="rlB-5O-PdH" secondAttribute="bottom" constant="-3" id="jQd-G3-Vcw"/>
+                            <constraint firstItem="Tvb-ZY-9cM" firstAttribute="top" secondItem="NNA-fR-bF9" secondAttribute="bottom" constant="48" id="koI-Li-LiL"/>
                             <constraint firstAttribute="trailing" secondItem="NNA-fR-bF9" secondAttribute="trailing" id="o6P-9b-qTg"/>
                             <constraint firstItem="rlB-5O-PdH" firstAttribute="leading" secondItem="Lqx-84-GVL" secondAttribute="leading" id="qul-cR-Zoe"/>
                             <constraint firstItem="NNA-fR-bF9" firstAttribute="leading" secondItem="Lqx-84-GVL" secondAttribute="leading" id="qys-H6-Hjx"/>
                             <constraint firstItem="a0j-y6-mXp" firstAttribute="leading" secondItem="Lqx-84-GVL" secondAttribute="leading" id="tpG-ST-1xS"/>
-                            <constraint firstItem="yDx-ec-w6f" firstAttribute="top" secondItem="NNA-fR-bF9" secondAttribute="bottom" id="w7a-46-JTE"/>
+                            <constraint firstItem="yDx-ec-w6f" firstAttribute="top" secondItem="NNA-fR-bF9" secondAttribute="bottom" id="w7a-46-JTE">
+                                <variation key="heightClass=regular" constant="142"/>
+                            </constraint>
                             <constraint firstItem="NNA-fR-bF9" firstAttribute="top" secondItem="rlB-5O-PdH" secondAttribute="bottom" constant="150" id="wgf-QI-faN"/>
                             <constraint firstItem="a0j-y6-mXp" firstAttribute="width" secondItem="Lqx-84-GVL" secondAttribute="width" id="wj5-0s-98y"/>
                             <constraint firstItem="a0j-y6-mXp" firstAttribute="centerX" secondItem="Lqx-84-GVL" secondAttribute="centerX" id="zP3-DE-pyI"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Tvb-ZY-9cM"/>
+                            </mask>
                             <mask key="constraints">
                                 <exclude reference="SHe-Mv-ddr"/>
                                 <exclude reference="ZPi-uK-mtE"/>
                                 <exclude reference="wj5-0s-98y"/>
                                 <exclude reference="zP3-DE-pyI"/>
+                                <exclude reference="0mE-Wx-0BV"/>
+                                <exclude reference="koI-Li-LiL"/>
+                                <exclude reference="Ntn-2H-nDf"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -965,6 +1009,16 @@
                                 <include reference="ZPi-uK-mtE"/>
                                 <include reference="wj5-0s-98y"/>
                                 <include reference="zP3-DE-pyI"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="Tvb-ZY-9cM"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0mE-Wx-0BV"/>
+                                <include reference="koI-Li-LiL"/>
+                                <include reference="Ntn-2H-nDf"/>
                             </mask>
                         </variation>
                     </view>
@@ -1017,7 +1071,7 @@
                                         <variation key="heightClass=compact" ambiguous="YES">
                                             <rect key="frame" x="0.0" y="0.0" width="187" height="0.0"/>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                             <rect key="frame" x="0.0" y="0.0" width="1366" height="0.0"/>
                                         </variation>
                                     </view>
@@ -2006,6 +2060,6 @@
         <image name="blue button ipad" width="682" height="141"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qVD-yF-ahh"/>
+        <segue reference="1sx-vj-Ng8"/>
     </inferredMetricsTieBreakers>
 </document>
